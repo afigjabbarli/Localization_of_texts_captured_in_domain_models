@@ -16,15 +16,15 @@ namespace TaskManagement.Common.Commands
 
             if (language == "english")
             {
-                LocalizationService.CurrentCulture = SupportedCulture.English;
+                LocalizationService.CurrentCulture = SupportedCulture.Eng;
             }
             else if (language == "russian")
             {
-                LocalizationService.CurrentCulture = SupportedCulture.Russian;
+                LocalizationService.CurrentCulture = SupportedCulture.Rus;
             }
             else
             {
-                LocalizationService.CurrentCulture = SupportedCulture.Azerbaijani;
+                LocalizationService.CurrentCulture = SupportedCulture.Aze;
             }
 
 

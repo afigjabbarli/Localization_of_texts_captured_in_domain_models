@@ -8,8 +8,9 @@ namespace TaskManagement.Contants
 {
     public enum SupportedCulture
     {
-        Azerbaijani = 1,
-        Russian = 2,
-        English = 3,
+        Aze = 1,
+        Rus = 2,
+        Eng = 3
     }
-}
+        
+}   
