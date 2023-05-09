@@ -12,9 +12,9 @@ namespace TaskManagement.Contants
         public const string AccountBlocked_Rus = "Your account blocked rus";
         public const string AccountBlocked_Eng = "Your account blocked eng";
 
-        public const string GetAdminName_Aze = "User pls enter your name aze";
-        public const string GetAdminName_Rus = "User pls enter your name rus";
-        public const string GetAdminName_Eng = "User pls enter your name eng";
+        public const string GetAdminName_Aze = "User pls enter your name aze:";
+        public const string GetAdminName_Rus = "User pls enter your name rus:";
+        public const string GetAdminName_Eng = "User pls enter your name eng:";
 
         public const string Blogs_Aze = "Bloglar menyusu";
         public const string Blogs_Rus = "Меню блогов";

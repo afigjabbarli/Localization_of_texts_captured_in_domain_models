@@ -13,8 +13,8 @@ namespace TaskManagement.Common.Commands
     {
         public void Handle() //use alias
         {
-            while (true)
-            {
+            
+            
 
 
             Console.Write("Please enter your email:"); string email = Console.ReadLine()!;
@@ -57,7 +57,7 @@ namespace TaskManagement.Common.Commands
                     }
                 }
             }
-            }
+            
         }
     }
 }

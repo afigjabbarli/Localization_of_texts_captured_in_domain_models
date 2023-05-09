@@ -22,7 +22,7 @@ namespace TaskManagement.Common.Validators
         {
             while (true)
             {
-                Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.GetAdminName));
+                Console.Write(LocalizationService.GetTranslation(TranslationKey.GetAdminName));
                 string firstName = Console.ReadLine()!;
 
                 if (IsValidFirstName(firstName))
@@ -48,7 +48,7 @@ namespace TaskManagement.Common.Validators
         {
             while (true)
             {
-                Console.WriteLine("Pls enter last name : ");
+                Console.Write("Pls enter last name : ");
                 string lastName = Console.ReadLine()!;
 
                 if (IsValidLastName(lastName))
@@ -73,10 +73,10 @@ namespace TaskManagement.Common.Validators
         {
             while (true)
             {
-                Console.WriteLine("Pls enter password : ");
+                Console.Write("Pls enter password : ");
                 string password = Console.ReadLine()!;
 
-                Console.WriteLine("Pls enter confirm password : ");
+                Console.Write("Pls enter confirm password : ");
                 string confirmPassword = Console.ReadLine()!;
 
                 if (password == confirmPassword)
@@ -95,7 +95,7 @@ namespace TaskManagement.Common.Validators
             while (true)
             {
 
-                Console.WriteLine("Pls enter email : ");
+                Console.Write("Pls enter email : ");
                 string email = Console.ReadLine()!;
 
                 //Pattern for emails where receipecnt can be digit or letter and

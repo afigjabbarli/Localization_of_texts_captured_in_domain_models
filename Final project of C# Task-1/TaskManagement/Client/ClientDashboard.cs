@@ -15,7 +15,7 @@ namespace TaskManagement.Client
     {
         public void Introduction()
         {
-            Console.WriteLine($"Hello! dear user : <<{UserService.CurrentUser.LastName} + {UserService.CurrentUser.Name}>> + welcome to the user menu...");
+            Console.WriteLine($"Hello! dear user : <<{UserService.CurrentUser.LastName} {UserService.CurrentUser.Name}>> welcome to the user menu...");
             Console.WriteLine();
             Console.WriteLine("Add Blog Command");
             Console.WriteLine("Close Account Command");
@@ -24,7 +24,7 @@ namespace TaskManagement.Client
             Console.WriteLine();
             while ( true )
             {
-                string command = Console.ReadLine()!;
+                Console.Write("Command:"); string command = Console.ReadLine()!;
                 switch( command )
                 {
                     case "Add Blog Command":
