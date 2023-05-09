@@ -40,7 +40,6 @@ namespace TaskManagement.Client.Commands
             }
             return message;
         }
-            
         public static string AcceptAndConfirmBlogTitleEng()
         {
             Console.WriteLine();
@@ -97,7 +96,10 @@ namespace TaskManagement.Client.Commands
             }
             return message;
         }
+    }
+}
 
+            
 
                 
             
@@ -111,5 +113,3 @@ namespace TaskManagement.Client.Commands
 
 
 
-    }
-}
