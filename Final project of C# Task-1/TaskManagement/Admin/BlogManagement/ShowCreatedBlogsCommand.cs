@@ -20,7 +20,7 @@ namespace TaskManagement.Admin.BlogManagement
 
             foreach (Blog blog in createdBlogs)
             {
-                Console.WriteLine($"{blog.Id} {blog.Title} {blog.Owner.GetFullName()} {blog.CreatedAt}");
+                Console.WriteLine($"{blog.Id} {blog.Title_Aze} {blog.Title_Rus} {blog.Title_Eng} {blog.Owner.GetFullName()} {blog.CreatedAt}");
             }
         }
     }

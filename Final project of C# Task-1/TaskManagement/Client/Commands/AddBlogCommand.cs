@@ -18,27 +18,25 @@ namespace TaskManagement.Client.Commands
         {
             BlogRepository blogRepository = new BlogRepository();
             Console.WriteLine("Blogs Menu");
-            Console.WriteLine();
-            Console.WriteLine("Please choose the appropriate language:");
-            Console.WriteLine("<1> [Aze]");
-            Console.WriteLine("<1> [Rus]");
-            Console.WriteLine("<1> [Eng]");
-            Console.WriteLine();
-            string language = Console.ReadLine()!;
-            switch (language)
-            {
-                case "Aze":
-                ComposingBlogs.CreatingBlogsInAzerbaijaniLanguage();
-                break;
-                case "Rus":
-                ComposingBlogs.CreatingBlogsInRussianLanguage();
-                break;
-                case "Eng":
-                ComposingBlogs.CreatingBlogsInEnglishLanguage();
-                break;
-            }
+            string title_Aze = ComposingOfBlogs.AcceptAndConfirmBlogTitleAze();
+            string title_Rus = ComposingOfBlogs.AcceptAndConfirmBlogTitleRus();
+            string title_Eng = ComposingOfBlogs.AcceptAndConfirmBlogTitleEng();
+            string content_Aze = ComposingOfBlogs.AcceptAndConfirmBlogContentAze();
+            string content_Rus = ComposingOfBlogs.AcceptAndConfirmBlogContentRus();
+            string content_Eng = ComposingOfBlogs.AcceptAndConfirmBlogContentEng();
+
+            Blog blog = new Blog(title_Aze, title_Rus, title_Eng, content_Aze, content_Rus, content_Eng, UserService.CurrentUser, BlogStatus.Created );
+            blogRepository.Insert( blog );
+
         }
     }
 }
+
+
+
+
+        
+   
+            
 
            
