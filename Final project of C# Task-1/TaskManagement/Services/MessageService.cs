@@ -36,7 +36,7 @@ namespace TaskManagement.Services
             return blogMessageTemplate
               .Replace(MessageTemplateKeyword.FIRST_NAME, blog.Owner.Name)
               .Replace(MessageTemplateKeyword.LAST_NAME, blog.Owner.LastName)
-              .Replace(MessageTemplateKeyword.BLOG_TITLE, blog.Title);
+              .Replace(MessageTemplateKeyword.BLOG_TITLE, blog.Title_Aze);
         }
 
         public void SendMessage(string message, User sender, User receiver)

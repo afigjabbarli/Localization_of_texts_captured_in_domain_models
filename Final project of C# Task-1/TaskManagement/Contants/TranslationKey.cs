@@ -9,6 +9,15 @@ namespace TaskManagement.Contants
     public enum TranslationKey
     {
         AccountBlocked = 1,
-        GetAdminName = 2
+        GetAdminName = 2,
+        Blogs = 3,
+        Blogs_TitleAz = 4,
+        Blogs_TitleRu = 5,
+        Blogs_TitleEn = 6,
+        Title = 7,
+        Blogs_ContentAz = 8,
+        Blogs_ContentRu = 9,
+        Blogs_ContentEn = 10,
+        Incorrect_Information = 11
     }
 }

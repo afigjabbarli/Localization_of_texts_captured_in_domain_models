@@ -100,8 +100,8 @@ namespace TaskManagement.Common.Validators
 
                 //Pattern for emails where receipecnt can be digit or letter and
                 //domain should be code.edu.az
-                string pattern = "\"^[A-Z]{1}[a-z0-9]{10,30}@code\\.edu\\.az$\"gm";
-                Regex regex = new Regex(pattern);
+                
+                Regex regex = new Regex(@"^[A-Za-z0-9]{10,30}@code\.edu\.az$");
 
                 if (!regex.IsMatch(email))
                 {
@@ -114,6 +114,7 @@ namespace TaskManagement.Common.Validators
                     Console.WriteLine("Email should be unique");
                     continue;
                 }
+                return email;
 
             }
         }

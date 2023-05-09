@@ -17,7 +17,7 @@ namespace TaskManagement.Client.Commands
         public void Handle()
         {
             BlogRepository blogRepository = new BlogRepository();
-            Console.WriteLine("Blogs Menu");
+            Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Blogs));
             string title_Aze = ComposingOfBlogs.AcceptAndConfirmBlogTitleAze();
             string title_Rus = ComposingOfBlogs.AcceptAndConfirmBlogTitleRus();
             string title_Eng = ComposingOfBlogs.AcceptAndConfirmBlogTitleEng();

@@ -13,8 +13,12 @@ namespace TaskManagement.Common.Commands
     {
         public void Handle() //use alias
         {
-            string email = Console.ReadLine()!;
-            string password = Console.ReadLine()!;
+            while (true)
+            {
+
+
+            Console.Write("Please enter your email:"); string email = Console.ReadLine()!;
+            Console.Write("Please enter your password:"); string password = Console.ReadLine()!;
             UserRepository userRepository = new UserRepository();
             List<User> users = userRepository.GetAll().Cast<User>().ToList();
 
@@ -52,6 +56,7 @@ namespace TaskManagement.Common.Commands
                         clientDashboard.Introduction();
                     }
                 }
+            }
             }
         }
     }

@@ -14,21 +14,28 @@ namespace TaskManagement
 
         static void Main(string[] args)
         {
+            Console.WriteLine("Please choose one of the commands shown on the screen.");
+            Console.WriteLine();
+            Console.WriteLine("Register");
+            Console.WriteLine("Login");
+            Console.WriteLine("Update-language");
+            Console.WriteLine("Exit");
+            
             while (true)
             {
-                string command = Console.ReadLine()!;
+                Console.Write("Command:"); string command = Console.ReadLine()!;
                 switch (command)
                 {
-                    case "/register":
+                    case "Register":
                         CommandRouter.Route<RegisterCommand>();
                         break;
-                    case "/login":
+                    case "Login":
                         CommandRouter.Route<LoginCommand>();
                         break;
-                    case "/update-language":
+                    case "Update-language":
                         CommandRouter.Route<UpdateLanguageCommand>();
                         break;
-                    case "/exit":
+                    case "Exit":
                         Console.WriteLine("Bye-bye");
                         return;
                     default:
