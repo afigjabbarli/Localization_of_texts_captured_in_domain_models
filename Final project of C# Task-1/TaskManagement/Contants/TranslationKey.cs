@@ -19,6 +19,7 @@ namespace TaskManagement.Contants
         Blogs_ContentRu = 9,
         Blogs_ContentEn = 10,
         Incorrect_Information = 11,
-        Title = 12
+        Title = 12,
+        Content = 13
     }
 }

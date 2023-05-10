@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using TaskManagement.Admin.BlogManagement;
@@ -25,8 +26,10 @@ namespace TaskManagement.Client.Commands
             string title_Eng = ComposingOfBlogs.AcceptAndConfirmBlogTitleEng();
             string content_Eng = ComposingOfBlogs.AcceptAndConfirmBlogContentEng();
 
+
             Blog blog = new Blog(title_Aze, title_Rus, title_Eng, content_Aze, content_Rus, content_Eng, UserService.CurrentUser, BlogStatus.Created );
             blogRepository.Insert( blog );
+            
 
         }
     }

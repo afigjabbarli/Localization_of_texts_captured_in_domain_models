@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using TaskManagement.Common.Commands;
@@ -23,8 +24,12 @@ namespace TaskManagement.Client.Commands
                 Console.WriteLine($"Blog`s author: {blog.Owner.LastName} {blog.Owner.Name}");
                 Console.WriteLine($"Contact the author: {blog.Owner.Email}");    
                 Console.WriteLine($"Blog`s creation date: {blog.CreatedAt}");
-                Console.WriteLine($"Blog`s title: {LocalizationService.DisplayingBlogsInTheCurrentLanguage(TranslationKey.Title)}");
+                Console.Write("Please enter the blog`s number:");
+                int blogId = int.Parse(Console.ReadLine()!);
+                Console.WriteLine($"Blog`s title: {LocalizationService.DisplayingBlogsTitleCurrentLanguage(TranslationKey.Title, blogId)}");
+                Console.WriteLine($"Blog`s content: {LocalizationService.DisplayingBlogsContentCurrentLanguage(TranslationKey.Content, blogId)}");
             }
         }
     }
 }
+                

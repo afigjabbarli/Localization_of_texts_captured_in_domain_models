@@ -27,13 +27,83 @@ namespace TaskManagement.Services
             return (string)fieldInfo.GetValue(fieldName)!;
         }
 
-        public static string DisplayingBlogsInTheCurrentLanguage(TranslationKey key)
+        public static string DisplayingBlogsTitleCurrentLanguage(TranslationKey key, int blogId)
         {
-            return string.Empty;
-        }
 
-    }
+            string fieldNameTitle = $"{key}_{CurrentCulture}";
+            foreach (Blog blog in DataContext.Blogs)
+            {
+                if (blog.Id == blogId)
+                {
+                    PropertyInfo info = blog.GetType().GetProperty(fieldNameTitle)!;
+                    Type type = typeof(Blog);
+                    if (info.Name == fieldNameTitle)
+                    {
+                        return (string)type.GetProperty(fieldNameTitle)?.GetValue(blog)!;
+                    }
+                }
+            }
+            return null!;
+
+        }
+        public static string DisplayingBlogsContentCurrentLanguage(TranslationKey key, int blogId)
+        {
+            string fieldNameContent = $"{key}_{CurrentCulture}";
+            foreach (Blog blog in DataContext.Blogs)
+            {
+                if (blog.Id == blogId)
+                {
+                    PropertyInfo info = blog.GetType().GetProperty(fieldNameContent)!;
+                    Type type = typeof(Blog);
+                    if (info.Name == fieldNameContent)
+                    {
+                       return (string)type.GetProperty(fieldNameContent)?.GetValue(blog)!;
+                    }
+                }
+            }
+            return null!;
+        }
+            
+
+           
+
+
+            
+
+        
+         
+
+
+
+
+
+
+    
+
+
+
+         
+
+
+
+
+
+    }        
+
 }
+                        
+                        
+                        
+
+
+
+
+
+
+
+
+
+
 
 
 

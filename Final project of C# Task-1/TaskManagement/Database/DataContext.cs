@@ -1,5 +1,6 @@
 ﻿using TaskManagement.Contants;
 using TaskManagement.Database.Models;
+using TaskManagement.Database.Repositories;
 
 namespace TaskManagement.Database
 {
@@ -23,5 +24,6 @@ namespace TaskManagement.Database
         {
             Users.Add(new User("Super", "Admin", "123321", "admin@gmail.com", new DateTime(2022, 01, 01),  UserRole.Admin));
         }
+       
     }
 }

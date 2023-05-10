@@ -53,9 +53,10 @@ namespace TaskManagement.Contants
         public const string Incorrect_Information_Rus = "Введенная информация неверна! Пожалуйста, введите еще раз...";
         public const string Incorrect_Information_Eng = "The information entered is incorrect! Please re-enter...";
 
+    }
+
+   
         
 
 
-
-    }
 }
