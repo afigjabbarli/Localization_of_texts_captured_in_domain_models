@@ -26,8 +26,10 @@ namespace TaskManagement.Client.Commands
                 Console.WriteLine($"Blog`s creation date: {blog.CreatedAt}");
                 while (true)
                 {
+                  Console.WriteLine();
                   Console.Write("Please enter the blog`s number:");
                   int blogId = int.Parse(Console.ReadLine()!);
+                  Console.WriteLine();
                   Console.WriteLine($"Blog`s title: {LocalizationService.DisplayingBlogsTitleCurrentLanguage(TranslationKey.Title, blogId)}");
                   Console.WriteLine($"Blog`s content: {LocalizationService.DisplayingBlogsContentCurrentLanguage(TranslationKey.Content, blogId)}");
                 }
