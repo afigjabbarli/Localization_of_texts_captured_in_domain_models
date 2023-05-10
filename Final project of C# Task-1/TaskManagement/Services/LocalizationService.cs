@@ -15,8 +15,8 @@ namespace TaskManagement.Services
 {
     public class LocalizationService
     {
-        public static string blogTitle = "Blog title not found! Please re-enter the number...";
-        public static string blogContent = "Blog content not found! Please re-enter the number...";
+        
+        
         public static SupportedCulture CurrentCulture { get; set; } = SupportedCulture.Rus;
 
         public static string GetTranslation(TranslationKey key)
@@ -45,7 +45,7 @@ namespace TaskManagement.Services
                     }
                 }
             }
-            return blogTitle;
+            return LocalizationService.GetTranslation(TranslationKey.blogTitle);
 
         }
         public static string DisplayingBlogsContentCurrentLanguage(TranslationKey key, int blogId)
@@ -63,7 +63,7 @@ namespace TaskManagement.Services
                     }
                 }
             }
-            return blogContent;
+            return LocalizationService.GetTranslation(TranslationKey.blogContent);
         }
             
 

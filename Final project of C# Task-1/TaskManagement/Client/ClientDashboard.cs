@@ -20,6 +20,7 @@ namespace TaskManagement.Client
             Console.WriteLine("Add Blog Command");
             Console.WriteLine("Close Account Command");
             Console.WriteLine("Show Messages Command");
+            Console.WriteLine("Display of Created Blogs");
             Console.WriteLine("Exit");
             Console.WriteLine();
             while ( true )

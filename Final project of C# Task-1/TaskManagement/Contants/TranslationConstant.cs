@@ -53,6 +53,14 @@ namespace TaskManagement.Contants
         public const string Incorrect_Information_Rus = "Введенная информация неверна! Пожалуйста, введите еще раз...";
         public const string Incorrect_Information_Eng = "The information entered is incorrect! Please re-enter...";
 
+        public const string blogTitle_Aze = "Bloq başlığı tapılmadı! Zəhmət olmasa nömrəni yenidən daxil edin...";
+        public const string blogTitle_Rus = "Название блога не найдено! Пожалуйста, введите номер еще раз...";
+        public const string blogTitle_Eng = "Blog title not found! Please re-enter the number...";
+
+        public const string blogContent_Aze = "Bloq məzmunu tapılmadı! Nömrəni yenidən daxil edin...";
+        public const string blogContent_Rus = "Содержимое блога не найдено! Пожалуйста, введите номер еще раз...";
+        public const string blogContent_Eng = "Blog content not found! Please re-enter the number...";
+
     }
 
    
