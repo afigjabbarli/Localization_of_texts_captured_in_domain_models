@@ -36,6 +36,9 @@ namespace TaskManagement.Client
                     case "Show Messages Command":
                     CommandRouter.Route<ShowMessagesCommand>();
                     break;
+                    case "Display of Created Blogs":
+                    CommandRouter.Route<DisplayOfCreatedBlogs>();
+                    break;
                     case "Exit":
                     return;
                     default: Console.WriteLine("This command is not in the menu! Please re-enter...");

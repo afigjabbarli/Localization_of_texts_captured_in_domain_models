@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TaskManagement.Database.Models;
 
 namespace TaskManagement.Contants
 {
@@ -32,9 +33,9 @@ namespace TaskManagement.Contants
         public const string Blogs_TitleEn_Rus = "Пожалуйста, напишите название блога(In English)";
         public const string Blogs_TitleEn_Eng = "Please write the title of the blog(In English)";
 
-        public const string Title_Aze = "Bloq başlığı:";
-        public const string Title_Rus = "Название блога:";
-        public const string Title_Eng = "Blog`s title:";
+        public const string Titles_Aze = "Bloq başlığı:";
+        public const string Titles_Rus = "Название блога:";
+        public const string Titles_Eng = "Blog`s title:";
 
         public const string Blogs_ContentAz_Aze = "Zehmet olmasa blogun mezmununu yazin(In Azerbaijani):";
         public const string Blogs_ContentAz_Rus = "Пожалуйста, напишите содержание блога (In Azerbaijani):";
@@ -51,6 +52,8 @@ namespace TaskManagement.Contants
         public const string Incorrect_Information_Aze = "Daxil edilen melumat sehvdir! Xahish edirik yeniden daxil edin...";
         public const string Incorrect_Information_Rus = "Введенная информация неверна! Пожалуйста, введите еще раз...";
         public const string Incorrect_Information_Eng = "The information entered is incorrect! Please re-enter...";
+
+        
 
 
 

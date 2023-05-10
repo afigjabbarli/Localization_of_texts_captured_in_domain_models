@@ -19,10 +19,10 @@ namespace TaskManagement.Client.Commands
             BlogRepository blogRepository = new BlogRepository();
             Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Blogs));
             string title_Aze = ComposingOfBlogs.AcceptAndConfirmBlogTitleAze();
-            string title_Rus = ComposingOfBlogs.AcceptAndConfirmBlogTitleRus();
-            string title_Eng = ComposingOfBlogs.AcceptAndConfirmBlogTitleEng();
             string content_Aze = ComposingOfBlogs.AcceptAndConfirmBlogContentAze();
+            string title_Rus = ComposingOfBlogs.AcceptAndConfirmBlogTitleRus();
             string content_Rus = ComposingOfBlogs.AcceptAndConfirmBlogContentRus();
+            string title_Eng = ComposingOfBlogs.AcceptAndConfirmBlogTitleEng();
             string content_Eng = ComposingOfBlogs.AcceptAndConfirmBlogContentEng();
 
             Blog blog = new Blog(title_Aze, title_Rus, title_Eng, content_Aze, content_Rus, content_Eng, UserService.CurrentUser, BlogStatus.Created );

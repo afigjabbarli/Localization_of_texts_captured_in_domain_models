@@ -14,10 +14,11 @@ namespace TaskManagement.Contants
         Blogs_TitleAz = 4,
         Blogs_TitleRu = 5,
         Blogs_TitleEn = 6,
-        Title = 7,
+        Titles = 7,
         Blogs_ContentAz = 8,
         Blogs_ContentRu = 9,
         Blogs_ContentEn = 10,
-        Incorrect_Information = 11
+        Incorrect_Information = 11,
+        Title = 12
     }
 }

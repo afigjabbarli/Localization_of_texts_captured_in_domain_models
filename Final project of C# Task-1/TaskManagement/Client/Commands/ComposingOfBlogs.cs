@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using TaskManagement.Common.Commands;
 using TaskManagement.Contants;
 using TaskManagement.Services;
 
@@ -18,8 +19,8 @@ namespace TaskManagement.Client.Commands
             {
 
               Console.WriteLine();
-              Console.Write(LocalizationService.GetTranslation(TranslationKey.Blogs_TitleAz));
-              Console.Write(LocalizationService.GetTranslation(TranslationKey.Title) + " "); string title_Aze = Console.ReadLine()!;
+              Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Blogs_TitleAz));
+              Console.Write(LocalizationService.GetTranslation(TranslationKey.Titles) + " "); string title_Aze = Console.ReadLine()!;
               Console.WriteLine();
               Regex regex = new Regex(@"^[A-Za-z0-9!()"":?.,`\s]{5,60}$");
               Match match = regex.Match(title_Aze);
@@ -34,8 +35,8 @@ namespace TaskManagement.Client.Commands
             while(true)
             {
               Console.WriteLine();
-              Console.Write(LocalizationService.GetTranslation(TranslationKey.Blogs_TitleRu));
-              Console.Write(LocalizationService.GetTranslation(TranslationKey.Title) + " "); string title_Rus = Console.ReadLine()!;
+              Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Blogs_TitleRu));
+              Console.Write(LocalizationService.GetTranslation(TranslationKey.Titles) + " "); string title_Rus = Console.ReadLine()!;
               Console.WriteLine();
               Regex regex = new Regex(@"^[А-Яа-я0-9!()"":?.,`\s]{5,60}$");
               Match match = regex.Match(title_Rus);
@@ -50,8 +51,8 @@ namespace TaskManagement.Client.Commands
             while(true)
             {
               Console.WriteLine();
-              Console.Write(LocalizationService.GetTranslation(TranslationKey.Blogs_TitleEn));
-              Console.Write(LocalizationService.GetTranslation(TranslationKey.Title) + " "); string title_Eng = Console.ReadLine()!;
+              Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Blogs_TitleEn));
+              Console.Write(LocalizationService.GetTranslation(TranslationKey.Titles) + " "); string title_Eng = Console.ReadLine()!;
               Console.WriteLine();
               Regex regex = new Regex(@"^[A-Za-z0-9!()"":?.,`\s]{5,60}$");
               Match match = regex.Match(title_Eng);

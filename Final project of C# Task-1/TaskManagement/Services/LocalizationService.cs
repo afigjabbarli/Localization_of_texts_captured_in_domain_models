@@ -5,6 +5,9 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using TaskManagement.Contants;
+using TaskManagement.Database;
+using TaskManagement.Database.Models;
+using TaskManagement.Database.Repositories;
 using TaskManagement.Exceptions;
 using TaskManagement.Utilities;
 
@@ -21,8 +24,17 @@ namespace TaskManagement.Services
             string fieldName = $"{key}_{CurrentCulture}";
             FieldInfo fieldInfo = translationConstantType.GetField(fieldName)!;
 
-            return (string)fieldInfo.GetValue(null)!;
+            return (string)fieldInfo.GetValue(fieldName)!;
+        }
+
+        public static string DisplayingBlogsInTheCurrentLanguage(TranslationKey key)
+        {
+            return string.Empty;
         }
 
     }
 }
+
+
+
+
