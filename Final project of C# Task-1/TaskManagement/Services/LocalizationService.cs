@@ -15,6 +15,7 @@ namespace TaskManagement.Services
 {
     public class LocalizationService
     {
+        public static string message = "Blog not found! Please re-enter the number...";
         public static SupportedCulture CurrentCulture { get; set; } = SupportedCulture.Rus;
 
         public static string GetTranslation(TranslationKey key)
@@ -43,7 +44,7 @@ namespace TaskManagement.Services
                     }
                 }
             }
-            return null!;
+            return message;
 
         }
         public static string DisplayingBlogsContentCurrentLanguage(TranslationKey key, int blogId)
@@ -61,7 +62,7 @@ namespace TaskManagement.Services
                     }
                 }
             }
-            return null!;
+            return message;
         }
             
 

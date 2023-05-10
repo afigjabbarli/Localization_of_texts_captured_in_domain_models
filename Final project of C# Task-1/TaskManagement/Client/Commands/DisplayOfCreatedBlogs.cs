@@ -24,12 +24,16 @@ namespace TaskManagement.Client.Commands
                 Console.WriteLine($"Blog`s author: {blog.Owner.LastName} {blog.Owner.Name}");
                 Console.WriteLine($"Contact the author: {blog.Owner.Email}");    
                 Console.WriteLine($"Blog`s creation date: {blog.CreatedAt}");
-                Console.Write("Please enter the blog`s number:");
-                int blogId = int.Parse(Console.ReadLine()!);
-                Console.WriteLine($"Blog`s title: {LocalizationService.DisplayingBlogsTitleCurrentLanguage(TranslationKey.Title, blogId)}");
-                Console.WriteLine($"Blog`s content: {LocalizationService.DisplayingBlogsContentCurrentLanguage(TranslationKey.Content, blogId)}");
+                while (true)
+                {
+                  Console.Write("Please enter the blog`s number:");
+                  int blogId = int.Parse(Console.ReadLine()!);
+                  Console.WriteLine($"Blog`s title: {LocalizationService.DisplayingBlogsTitleCurrentLanguage(TranslationKey.Title, blogId)}");
+                  Console.WriteLine($"Blog`s content: {LocalizationService.DisplayingBlogsContentCurrentLanguage(TranslationKey.Content, blogId)}");
+                }
             }
         }
     }
+
 }
                 
