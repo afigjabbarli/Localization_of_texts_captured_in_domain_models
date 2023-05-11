@@ -21,8 +21,6 @@ namespace TaskManagement.Client
             Console.WriteLine("Close Account Command");
             Console.WriteLine("Message Management Panel");
             Console.WriteLine("Blog Management Panel");
-            Console.WriteLine("Add Blog Command");
-            Console.WriteLine("Display of Created Blogs");
             Console.WriteLine("Exit");
             Console.WriteLine();
             while ( true )
@@ -47,6 +45,7 @@ namespace TaskManagement.Client
                     default: Console.WriteLine("This command is not in the menu! Please re-enter...");
                     break;
                     
+            
 
 
 
