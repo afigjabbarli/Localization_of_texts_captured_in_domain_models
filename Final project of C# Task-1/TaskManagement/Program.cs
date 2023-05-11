@@ -9,10 +9,10 @@ using TaskManagement.Services;
 
 namespace TaskManagement
 {
-    public class Program
+    class Program
     {
 
-        public void Main(string[] args)
+        static void Main(string[] args)
         {
             Console.WriteLine("Please choose one of the commands shown on the screen.");
             Console.WriteLine();

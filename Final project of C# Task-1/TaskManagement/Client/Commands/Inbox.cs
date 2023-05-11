@@ -22,7 +22,7 @@ namespace TaskManagement.Client.Commands
             foreach (Message message in messages)
             {
                 Console.WriteLine(
-                    $"{currentRowNumber}.{message.Sender.GetFullName()} {message.Sender.Email} | {message.Content} | {message.CreatedAt}");
+                    $"{currentRowNumber}.{message.Sender.GetFullName()} {message.Sender.Email} | {message.Content_Aze} | {message.CreatedAt}");
 
                 currentRowNumber++;
             }

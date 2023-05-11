@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
+using TaskManagement.Client.Commands;
 using TaskManagement.Contants;
 using TaskManagement.Database.Models;
 using TaskManagement.Database.Repositories;
@@ -41,7 +42,14 @@ namespace TaskManagement.Services
 
         public void SendMessage(string message, User sender, User receiver)
         {
-            Message messageRecord = new Message(message, sender, receiver);
+            User user = ComposingOfMessages.AcceptAndConfirmReceiverEmail();
+            string subject_Aze = ComposingOfMessages.AcceptAndConfirmMessageSubjectAze();
+            string content_Aze = ComposingOfMessages.AcceptAndConfirmMessageContentAze();
+            string subject_Rus = ComposingOfMessages.AcceptAndConfirmMessageSubjectRus();
+            string content_Rus = ComposingOfMessages.AcceptAndConfirmMessageContentRus();
+            string subject_Eng = ComposingOfMessages.AcceptAndConfirmMessageSubjectEng();
+            string content_Eng = ComposingOfMessages.AcceptAndConfirmMessageContentEng();
+            Message messageRecord = new Message(subject_Aze, content_Rus, subject_Eng, content_Aze, subject_Rus, content_Eng , sender, receiver);
             _messageRepository.Insert(messageRecord);
         }
 

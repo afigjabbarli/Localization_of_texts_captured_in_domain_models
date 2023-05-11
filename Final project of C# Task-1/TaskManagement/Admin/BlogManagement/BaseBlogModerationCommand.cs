@@ -20,13 +20,13 @@ namespace TaskManagement.Admin.BlogManagement
 
         public Blog ValidateAndGetBlog()
         {
-            int id = int.Parse(Console.ReadLine());
-            Blog blog = (Blog)_blogRepository.GetById(id);
+            int id = int.Parse(Console.ReadLine()!);
+            Blog blog = (Blog)_blogRepository.GetById(id)!;
 
             if (blog is null)
             {
                 Console.WriteLine("Blog not found");
-                return default;
+                return default!;
             }
 
             return blog;

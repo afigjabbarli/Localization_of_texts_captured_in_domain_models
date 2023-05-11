@@ -14,6 +14,8 @@ namespace TaskManagement.Database.Repositories
         public UserRepository()
             : base(DataContext.Users) { }
 
+      
+
         public User GetUserOrDefaultByEmail(string email)
         {
             return GetBy(u => u.Email == email)!;

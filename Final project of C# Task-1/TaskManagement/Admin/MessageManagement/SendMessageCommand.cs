@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TaskManagement.Client;
+using TaskManagement.Client.Commands;
 using TaskManagement.Common.Commands;
 using TaskManagement.Database.Models;
 using TaskManagement.Database.Repositories;
@@ -14,22 +16,16 @@ namespace TaskManagement.Admin.MessageManagement
     {
         public void Handle()
         {
-            UserRepository userRepository = new UserRepository();
             MessageRepository messageRepository = new MessageRepository();
+            User user = ComposingOfMessages.AcceptAndConfirmReceiverEmail();
+            string subject_Aze = ComposingOfMessages.AcceptAndConfirmMessageSubjectAze();
+            string content_Aze = ComposingOfMessages.AcceptAndConfirmMessageContentAze();
+            string subject_Rus = ComposingOfMessages.AcceptAndConfirmMessageSubjectRus();
+            string content_Rus = ComposingOfMessages.AcceptAndConfirmMessageContentRus();
+            string subject_Eng = ComposingOfMessages.AcceptAndConfirmMessageSubjectEng();
+            string content_Eng = ComposingOfMessages.AcceptAndConfirmMessageContentEng();
 
-            string receiverEmail = Console.ReadLine()!;
-            User receiver = userRepository.GetUserOrDefaultByEmail(receiverEmail);
-
-            string content = Console.ReadLine()!; //+validations
-
-            if (receiver == null)
-            {
-                Console.WriteLine("User not found");
-                return;
-            }
-
-            Message message = new Message(content, UserService.CurrentUser, receiver);
-            messageRepository.Insert(message);
+            Message message = new Message(subject_Aze, subject_Rus, subject_Eng, content_Aze, content_Rus, content_Eng, UserService.CurrentUser, user);
         }
     }
 }

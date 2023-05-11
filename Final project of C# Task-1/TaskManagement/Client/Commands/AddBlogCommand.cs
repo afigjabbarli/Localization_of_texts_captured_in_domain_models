@@ -28,7 +28,7 @@ namespace TaskManagement.Client.Commands
 
 
             Blog blog = new Blog(title_Aze, title_Rus, title_Eng, content_Aze, content_Rus, content_Eng, UserService.CurrentUser, BlogStatus.Created );
-            blogRepository.Insert( blog );
+            blogRepository.Insert(blog);
             
 
         }
