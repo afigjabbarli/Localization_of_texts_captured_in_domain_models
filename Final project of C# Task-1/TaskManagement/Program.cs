@@ -12,7 +12,7 @@ namespace TaskManagement
     public class Program
     {
 
-        static void Main(string[] args)
+        public void Main(string[] args)
         {
             Console.WriteLine("Please choose one of the commands shown on the screen.");
             Console.WriteLine();

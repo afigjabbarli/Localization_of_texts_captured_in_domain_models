@@ -10,7 +10,7 @@ using TaskManagement.Services;
 
 namespace TaskManagement.Client.Commands
 {
-    public class ShowMessagesCommand : ICommandHandler
+    public class Inbox : ICommandHandler
     {
         public void Handle()
         {
