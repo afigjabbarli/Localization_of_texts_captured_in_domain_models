@@ -53,7 +53,7 @@ namespace TaskManagement.Client.Commands
         {
             while (true)
             {
-            Console.Write("Subject:" + " "); string content_Aze = Console.ReadLine()!;
+            Console.Write("Content:" + " "); string content_Aze = Console.ReadLine()!;
             Regex regex = new Regex(@"^[A-Za-z0-9!()"":?.,'`\s]{50,600}$");
             Match match = regex.Match(content_Aze);
             if (match.Success) return content_Aze;
@@ -77,7 +77,7 @@ namespace TaskManagement.Client.Commands
         {
             while(true)
             {
-            Console.Write("Subject:" + " "); string content_Rus = Console.ReadLine()!;
+            Console.Write("Content:" + " "); string content_Rus = Console.ReadLine()!;
             Regex regex = new Regex(@"^[А-Яа-я0-9!()"":?.,`'\s]{50,600}$");
             Match match = regex.Match(content_Rus);
             if (match.Success) return content_Rus;
@@ -101,7 +101,7 @@ namespace TaskManagement.Client.Commands
         {
             while (true)
             {
-            Console.Write("Subject:" + " "); string content_Eng = Console.ReadLine()!;
+            Console.Write("Content:" + " "); string content_Eng = Console.ReadLine()!;
             Regex regex = new Regex(@"^[A-Za-z0-9!()"":?.,'`\s]{50,600}$");
             Match match = regex.Match(content_Eng);
             if (match.Success) return content_Eng;

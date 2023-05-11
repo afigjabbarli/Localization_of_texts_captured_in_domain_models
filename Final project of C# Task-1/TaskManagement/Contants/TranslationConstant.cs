@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using TaskManagement.Database.Models;
@@ -60,6 +61,23 @@ namespace TaskManagement.Contants
         public const string blogContent_Aze = "Bloq məzmunu tapılmadı! Nömrəni yenidən daxil edin...";
         public const string blogContent_Rus = "Содержимое блога не найдено! Пожалуйста, введите номер еще раз...";
         public const string blogContent_Eng = "Blog content not found! Please re-enter the number...";
+
+        public const string shownCommand_Aze = "Zəhmət olmasa ekranda göstərilən əmrlərdən birini seçin.";
+        public const string shownCommand_Rus = "Пожалуйста, выберите одну из команд, показанных на экране.";
+        public const string shownCommand_Eng = "Please choose one of the commands shown on the screen.";
+
+        public const string registerCommand_Aze = "Qeydiyyat";
+        public const string registerCommand_Rus = "Регистр";
+        public const string registerCommand_Eng = "Register";
+
+        public const string loginCommand_Aze = "Girish";
+        public const string loginCommand_Rus = "Авторизоваться";
+        public const string loginCommand_Eng = "Login";
+
+        public const string languageCommand_Aze = "Girish";
+        public const string languageCommand_Rus = "Авторизоваться";
+        public const string languageCommand_Eng = "Update-language";
+
 
     }
 

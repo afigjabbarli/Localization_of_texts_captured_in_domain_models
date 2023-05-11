@@ -16,7 +16,7 @@ namespace TaskManagement
         {
             Console.WriteLine("Please choose one of the commands shown on the screen.");
             Console.WriteLine();
-            Console.WriteLine("Register");
+            Console.WriteLine();
             Console.WriteLine("Login");
             Console.WriteLine("Update-language");
             Console.WriteLine("Exit");

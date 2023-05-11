@@ -12,8 +12,7 @@ namespace TaskManagement.Database.Models
 {
     public class Message : BaseEntity<int>
     {
-        private User currentUser;
-        private string receiver;
+        
 
         public static int IdCounter { get; private set; }
         public string Subject_Aze { get; set; }
