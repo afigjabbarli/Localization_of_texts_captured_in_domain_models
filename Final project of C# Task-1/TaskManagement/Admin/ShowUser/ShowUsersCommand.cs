@@ -16,14 +16,14 @@ namespace TaskManagement.Admin.ShowUser
         {
             UserRepository userRepository = new UserRepository();
 
-            DateTime fromDate = DateTime.Parse(Console.ReadLine()!); // YY-DD-YYYYY 
+            Console.Write("Showing users from the entered date:"); DateTime fromDate = DateTime.Parse(Console.ReadLine()!); // YY-DD-YYYYY 
             List<User> users = userRepository.GetAll(u => u.CreatedAt > fromDate);
 
             int order = 1;
 
             foreach (User user in users)
             {
-                Console.WriteLine($"{order}. {user.GetShortInfo()} register date :  {user.CreatedAt.ToString("dd/MMMM/yyyy")}");
+                Console.WriteLine($"{order}. {user.GetShortInfo()} Register date :  {user.CreatedAt.ToString("dd/MMMM/yyyy")}");
                 order++;
             }
         }

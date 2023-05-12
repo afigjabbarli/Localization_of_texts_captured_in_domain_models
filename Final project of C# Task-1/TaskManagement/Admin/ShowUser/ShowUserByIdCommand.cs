@@ -20,9 +20,10 @@ namespace TaskManagement.Admin.ShowUser
             {
                 try
                 {
+                    Console.Write("");
                     int id = int.Parse(Console.ReadLine()!);
 
-                    User user = userRepository.GetById(id);
+                    User user = userRepository.GetById(id)!;
                     if (user == null)
                     {
                         Console.WriteLine("Email not found");

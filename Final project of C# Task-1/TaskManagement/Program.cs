@@ -18,7 +18,7 @@ namespace TaskManagement
             Console.WriteLine();
             Console.WriteLine("Register");
             Console.WriteLine("Login");
-            Console.WriteLine("Update-language");
+            Console.WriteLine("Update language");
             Console.WriteLine("Exit");
             Console.WriteLine();
             
@@ -33,7 +33,7 @@ namespace TaskManagement
                     case "Login":
                         CommandRouter.Route<LoginCommand>();
                         break;
-                    case "Update-language":
+                    case "Update language":
                         CommandRouter.Route<UpdateLanguageCommand>();
                         break;
                     case "Exit":

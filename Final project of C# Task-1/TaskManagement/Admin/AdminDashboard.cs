@@ -23,17 +23,17 @@ namespace TaskManagement.Admin
             Console.WriteLine();
             Console.WriteLine("Please choose one of the commands shown on the screen.");
             Console.WriteLine();
-            Console.WriteLine("/Show-users");
-            Console.WriteLine("/Show-user-by-email");
-            Console.WriteLine("/Show-user-by-id");
-            Console.WriteLine("/Add-user");
-            Console.WriteLine("/Promote-to-admin");
-            Console.WriteLine("/Depromote-from-admin");
-            Console.WriteLine("/Update-settings");
-            Console.WriteLine("/Remove-user");
-            Console.WriteLine("/Ban-user");
-            Console.WriteLine("/Message-to");
-            Console.WriteLine("/Logout");
+            Console.WriteLine("Show-users");
+            Console.WriteLine("Show-user-by-email");
+            Console.WriteLine("Show-user-by-id");
+            Console.WriteLine("Add-user");
+            Console.WriteLine("Promote-to-admin");
+            Console.WriteLine("Depromote-from-admin");
+            Console.WriteLine("Update-settings");
+            Console.WriteLine("Remove-user");
+            Console.WriteLine("Block-user");
+            Console.WriteLine("Message-to");
+            Console.WriteLine("Logout");
             while (true)
             {
                 Console.Write("Command:" + " ");
@@ -41,37 +41,37 @@ namespace TaskManagement.Admin
 
                 switch (command)
                 {
-                    case "/Show-users":
+                    case "Show-users":
                         CommandRouter.Route<ShowUsersCommand>();
                         break;
-                    case "/Show-user-by-email":
+                    case "Show-user-by-email":
                         CommandRouter.Route<ShowUserByEmailCommand>();
                         break;
-                    case "/Show-user-by-id":
+                    case "Show-user-by-id":
                         CommandRouter.Route<ShowUserByIdCommand>();
                         break;
-                    case "/Add-user":
+                    case "Add-user":
                         CommandRouter.Route<AddUserCommand>();
                         break;
-                    case "/Promote-to-admin":
+                    case "Promote-to-admin":
                         CommandRouter.Route<PromoteToAdminCommand>();
                         break;
-                    case "/Depromote-from-admin ":
+                    case "Depromote-from-admin":
                         CommandRouter.Route<DePromoteFromAdminCommand>();   
                         break;
-                    case "/Update-settings":
+                    case "Update-settings":
                         CommandRouter.Route<UpdateSettingsCommand>();
                         break;
-                    case "/Remove-user":
+                    case "Remove-user":
                         CommandRouter.Route<RemoveUserCommand>();
                         break;
-                    case "/Ban-user":
+                    case "Block-user":
                         CommandRouter.Route<BanUserCommand>();
                         break;
-                    case "/Message-to":
+                    case "Message-to":
                         CommandRouter.Route<SendMessageCommand>();
                         break;
-                    case "/Logout":
+                    case "Logout":
                         Console.WriteLine("Bye-bye");
                         return;
                     default:
