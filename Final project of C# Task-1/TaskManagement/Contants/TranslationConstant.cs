@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using TaskManagement.Client.Commands;
 using TaskManagement.Database.Models;
 
 namespace TaskManagement.Contants
@@ -61,6 +62,15 @@ namespace TaskManagement.Contants
         public const string blogContent_Aze = "Bloq mezmunu tapılmadı! Nomreni yeniden daxil edin...";
         public const string blogContent_Rus = "Содержимое блога не найдено! Пожалуйста, введите номер еще раз...";
         public const string blogContent_Eng = "Blog content not found! Please re-enter the number...";
+
+        public const string messageSubject_Aze = "Mesaj başlığı tapılmadı! Zehmet olmasa nömreni yeniden daxil edin...";
+        public const string messageSubject_Rus = "Название cообщение не найдено! Пожалуйста, введите номер еще раз...";
+        public const string messageSubject_Eng = "Message subject not found! Please re-enter the number...";
+
+        public const string messageContent_Aze = "Mesaj mezmunu tapılmadı! Nomreni yeniden daxil edin...";
+        public const string messageContent_Rus = "Содержимое cообщение не найдено! Пожалуйста, введите номер еще раз...";
+        public const string messageContent_Eng = "Message content not found! Please re-enter the number...";
+
 
         public const string shownCommand_Aze = "Zehmet olmasa ekranda gosterilen emrlerden birini sechin.";
         public const string shownCommand_Rus = "Пожалуйста, выберите одну из команд, показанных на экране.";
@@ -250,6 +260,80 @@ namespace TaskManagement.Contants
         public const string Command_Not_Found_Aze = "Bu emr menyuda yoxdur! Lutfen, yeniden daxil olun...";
         public const string Command_Not_Found_Rus = "Этой команды нет в меню! Пожалуйста, введите еще раз...";
         public const string Command_Not_Found_Eng = "This command is not in the menu! Please re-enter...";
+
+        public const string Invalid_Password_Aze = "Etibarsız parol";
+        public const string Invalid_Password_Rus = "Неверный пароль";
+        public const string Invalid_Password_Eng = "Invalid passowrd";
+
+        public const string Inbox_Aze = "Gelenler qutusu";
+        public const string Inbox_Rus = "Входящие";
+        public const string Inbox_Eng = "Inbox";
+
+        public const string Sent_Aze = "Gonderildi";
+        public const string Sent_Rus = "Отправил";
+        public const string Sent_Eng = "Sent";
+
+        public const string Compose_Aze = "Yaz";
+        public const string Compose_Rus = "Написать";
+        public const string Compose_Eng = "Compose";
+
+        public const string List_Rec_Messages_Aze = "Qebul edilen mesajların siyahısı";
+        public const string List_Rec_Messages_Rus = "Список полученных сообщений";
+        public const string List_Rec_Messages_Eng = "List of received messages";
+
+        public const string Mes_Sen_FullName_Aze = "Mesaj gonderenin tam adı:";
+        public const string Mes_Sen_FullName_Rus = "Имя и фамилия отправителя сообщения:";
+        public const string Mes_Sen_FullName_Eng = "Message sender fullname:";
+
+        public const string Mes_Sen_Email_Aze = "Mesaj gonderenin elektron pocht unvani:";
+        public const string Mes_Sen_Email_Rus = "Адрес электронной почты отправителя сообщения:";
+        public const string Mes_Sen_Email_Eng = "Email address of the message sender:";
+
+        public const string Mes_Subject_Aze = "Mesajın movzusu:";
+        public const string Mes_Subject_Rus = "Тема сообщения:";
+        public const string Mes_Subject_Eng = "Message subject:";
+
+        public const string Mes_Crt_Dt_Aze = "Mesajın yaradılma tarixi:";
+        public const string Mes_Crt_Dt_Aze_Rus = "Дата создания сообщения:";
+        public const string Mes_Crt_Dt_Aze_Eng = "Message created date:";
+
+        public const string Mes_Cur_Row_Nmb_Aze = "Mesajin cari sira nomresi:";
+        public const string Mes_Cur_Row_Nmb_Rus = "Номер текущей строки сообщения:";
+        public const string Mes_Cur_Row_Nmb_Eng = "Message current row number:";
+
+        public const string List_Sen_Messages_Aze = "Gonderilen mesajların siyahısı";
+        public const string List_Sen_Messages_Rus = "Список отправленных сообщений";
+        public const string List_Sen_Messages_Eng = "List of sent messages";
+
+        public const string Mes_Rec_FullName_Aze = "Mesaj qebuledicisinin tam adı:";
+        public const string Mes_Rec_FullName_Rus = "Полное имя получателя сообщения:";
+        public const string Mes_Rec_FullName_Eng = "Message receiver fullname:";
+
+        public const string Mes_Rec_Email_Aze = "Mesaj qebul edenin e-poçtu:";
+        public const string Mes_Rec_Email_Rus = "Электронная почта получателя сообщения::";
+        public const string Mes_Rec_Email_Eng = "Message receiver email:";
+
+        public const string Pls_Enter_Email_Of_Rec_Aze = "Zehmet olmasa qebuledicinin e-pochtunu daxil edin:";
+        public const string Pls_Enter_Email_Of_Rec_Rus = "Пожалуйста, введите адрес электронной почты получателя:";
+        public const string Pls_Enter_Email_Of_Rec_Eng = "Please enter eMail of receiver:";
+
+        public const string This_Aze = "Bu";
+        public const string This_Rus = "Этот";
+        public const string This_Eng = "This";
+
+        public const string User_Alr_Blck_Aze = "istifadechi artıq bloklanıb və siz ona mesaj göndere bilmezsiniz...";
+        public const string User_Alr_Blck_Rus = "пользователь уже заблокирован и вы не можете отправить ему сообщение...";
+        public const string User_Alr_Blck_Eng = "user is already blocked and you cannot send him a message...";
+
+        public const string No_For_This_Email_Aze = "Bu e-poçt uchun hech bir istifadechi tapılmadı! E-pochtu yeniden daxil edin...";
+        public const string No_For_This_Email_Rus = "Для этого письма не найдено ни одного пользователя! Пожалуйста, введите адрес электронной почты еще раз...";
+        public const string No_For_This_Email_Eng = "No user found for this email! Please re-enter the email...";
+
+        public const string Message_Id_Aze = "Mesaj ID";
+        public const string Message_Id_Rus = "Идентификатор сообщения";
+        public const string Message_Id_Eng = "Message ID";
+
+
 
 
 

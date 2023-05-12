@@ -69,7 +69,30 @@ namespace TaskManagement.Contants
         Close_Account_Command = 59,
         Message_Management = 60,
         Blog_Management = 61,
-        Command_Not_Found = 62
+        Command_Not_Found = 62,
+        Invalid_Password = 63,
+        Inbox = 64,
+        Sent = 65,
+        Compose = 66,
+        List_Rec_Messages = 67,
+        Mes_Rec_FullName = 68,
+        Mes_Rec_Email = 69,
+        Mes_Subject = 70,
+        Mes_Crt_Dt = 71,
+        Mes_Cur_Row_Nmb = 72,
+        Mes_Sen_FullName = 73,
+        Mes_Sen_Email = 74,
+        List_Sen_Messages = 75,
+        Pls_Enter_Email_Of_Rec = 76,
+        This = 77,
+        User_Alr_Blck = 78,
+        No_For_This_Email = 79,
+        Subject = 80,
+        messageSubject = 81,
+        messageContent = 82,
+        Message_Id = 83
+
+
 
 
     }

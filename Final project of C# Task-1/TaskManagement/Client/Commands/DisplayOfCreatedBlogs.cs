@@ -18,16 +18,19 @@ namespace TaskManagement.Client.Commands
         {
             Console.WriteLine("Different Blogs From All Over The World");
             Console.WriteLine();
+            int RowNumber = 1;  
             foreach(Blog blog in DataContext.Blogs)
             {
-                Console.WriteLine($"Blog`s number: {blog.Id}");
+                Console.WriteLine($"Blog`s ID: {blog.Id}");
                 Console.WriteLine($"Blog`s author: {blog.Owner.LastName} {blog.Owner.Name}");
                 Console.WriteLine($"Contact the author: {blog.Owner.Email}");    
                 Console.WriteLine($"Blog`s creation date: {blog.CreatedAt}");
-                while (true)
+                Console.WriteLine($"Blog`s current row number: {RowNumber}Blog`s title: {LocalizationService.DisplayingAllBlogsTitleCurrentLanguage(TranslationKey.Title, blog.CreatedAt)}");
+                RowNumber++;
+                if(DataContext.Blogs.Count == RowNumber)
                 {
                   Console.WriteLine();
-                  Console.Write("Please enter the blog`s number:");
+                  Console.Write("Please enter the blog`s ID:");
                   int blogId = int.Parse(Console.ReadLine()!);
                   Console.WriteLine();
                   Console.WriteLine($"Blog`s title: {LocalizationService.DisplayingBlogsTitleCurrentLanguage(TranslationKey.Title, blogId)}");

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using TaskManagement.Contants;
 using TaskManagement.Database;
 using TaskManagement.Database.Models;
 using TaskManagement.Database.Repositories;
@@ -19,20 +20,20 @@ namespace TaskManagement.Client.Commands
             while (true)
             {
 
-                Console.Write("Please enter eMail of receiver:" + " ");string receiverEmail = Console.ReadLine()!;//Regex ile validation aparmiram chunki yeqinki bu adda istifadechi sistemde varsa onun emaili artiq yoxlanishdan kechib...
+                Console.Write($"{LocalizationService.GetTranslation(TranslationKey.Pls_Enter_Email_Of_Rec)}" + " ");string receiverEmail = Console.ReadLine()!;//Regex ile validation aparmiram chunki yeqinki bu adda istifadechi sistemde varsa onun emaili artiq yoxlanishdan kechib...
                 foreach(User user in DataContext.Users)
                 {
                   if (user.Email == receiverEmail)
                   {
                       if(user.IsBanned)
                       {
-                         Console.WriteLine($"This <<{user.LastName}>> <<{user.Name}>>user is already blocked and you cannot send him a message...");
+                         Console.WriteLine($"{LocalizationService.GetTranslation(TranslationKey.This)} <<{user.LastName}>> <<{user.Name}>>{LocalizationService.GetTranslation(TranslationKey.User_Alr_Blck)}");
                        
                       }
                       return user;
                   }
                 }
-                Console.WriteLine("No user found for this email! Please re-enter the email...");
+                Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.No_For_This_Email));
                 return null!;
             }
         }

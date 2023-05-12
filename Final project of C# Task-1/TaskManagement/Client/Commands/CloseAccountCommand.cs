@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TaskManagement.Common.Commands;
+using TaskManagement.Contants;
 using TaskManagement.Database.Repositories;
 using TaskManagement.Services;
 
@@ -15,11 +16,11 @@ namespace TaskManagement.Client.Commands
         {
             UserRepository userRepository = new UserRepository();
 
-            string password = Console.ReadLine()!;
+            Console.Write(LocalizationService.GetTranslation(Contants.TranslationKey.Enter_Email)); string password = Console.ReadLine()!;
 
             if (UserService.CurrentUser.Password != password)
             {
-                Console.WriteLine("Invalid passowrd");
+                Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Invalid_Password));
                 return;
             }
 
