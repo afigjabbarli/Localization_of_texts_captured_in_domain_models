@@ -17,7 +17,7 @@ namespace TaskManagement.Services
     {
         
         
-        public static SupportedCulture CurrentCulture { get; set; } = SupportedCulture.Rus;
+        public static SupportedCulture CurrentCulture { get; set; } = SupportedCulture.Aze;
 
         public static string GetTranslation(TranslationKey key)
         {

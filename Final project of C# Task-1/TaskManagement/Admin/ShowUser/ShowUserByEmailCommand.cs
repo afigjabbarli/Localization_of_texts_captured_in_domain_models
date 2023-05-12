@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using TaskManagement.Common.Commands;
+using TaskManagement.Contants;
 using TaskManagement.Database;
 using TaskManagement.Database.Models;
 using TaskManagement.Database.Repositories;
+using TaskManagement.Services;
 
 namespace TaskManagement.Admin.ShowUser
 {
@@ -20,11 +23,11 @@ namespace TaskManagement.Admin.ShowUser
             {
                 try
                 {
-                    string emailForSearch = Console.ReadLine()!;
+                    Console.Write(LocalizationService.GetTranslation(TranslationKey.Enter_Email)); string emailForSearch = Console.ReadLine()!;
                     User user = userRepository.GetUserOrDefaultByEmail(emailForSearch);
                     if (user == null)
                     {
-                        Console.WriteLine("Email not found");
+                        Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Email_Not));
                         continue;
                     }
 
@@ -33,7 +36,7 @@ namespace TaskManagement.Admin.ShowUser
                 }
                 catch
                 {
-                    Console.WriteLine("Invalid input pls try again");
+                    Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Invalid_Input));
                 }
             }
 

@@ -2,6 +2,7 @@
 using TaskManagement.Contants;
 using TaskManagement.Database.Models;
 using TaskManagement.Database.Repositories;
+using TaskManagement.Services;
 
 namespace TaskManagement.Admin.UserManagement
 {
@@ -11,18 +12,18 @@ namespace TaskManagement.Admin.UserManagement
         {
             UserRepository userRepository = new UserRepository();
 
-            string email = Console.ReadLine()!;
+            Console.Write(LocalizationService.GetTranslation(TranslationKey.Enter_Email)); string email = Console.ReadLine()!;
             User user = userRepository.GetUserOrDefaultByEmail(email);
 
             if (user == null)
             {
-                Console.WriteLine("User not found");
+                Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.User_Not));
                 return;
             }
 
             if (user.Role == UserRole.Admin)
             {
-                Console.WriteLine($"User is admin you can't remove {user.GetShortInfo()}");
+                Console.WriteLine($"{LocalizationService.GetTranslation(TranslationKey.Cant_Remove_Admin)} {user.GetShortInfo()}");
                 return;
             }
 

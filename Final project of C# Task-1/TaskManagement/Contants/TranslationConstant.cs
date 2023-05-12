@@ -62,7 +62,7 @@ namespace TaskManagement.Contants
         public const string blogContent_Rus = "Содержимое блога не найдено! Пожалуйста, введите номер еще раз...";
         public const string blogContent_Eng = "Blog content not found! Please re-enter the number...";
 
-        public const string shownCommand_Aze = "Zehmət olmasa ekranda gosterilen emrlerden birini sechin.";
+        public const string shownCommand_Aze = "Zehmet olmasa ekranda gosterilen emrlerden birini sechin.";
         public const string shownCommand_Rus = "Пожалуйста, выберите одну из команд, показанных на экране.";
         public const string shownCommand_Eng = "Please choose one of the commands shown on the screen.";
 
@@ -82,9 +82,9 @@ namespace TaskManagement.Contants
         public const string Exit_Rus = "Выход";
         public const string Exit_Eng = "Exit";
 
-        public const string InputCommand_Aze = "emr";
+        public const string InputCommand_Aze = "Emr";
         public const string InputCommand_Rus = "команда";
-        public const string InputCommand_Eng = "command";
+        public const string InputCommand_Eng = "Command";
 
         public const string ByeBye_Aze = "Sagh ol";
         public const string ByeBye_Rus = "Пока-пока";
@@ -175,9 +175,9 @@ namespace TaskManagement.Contants
         public const string Show_Users_From_Register_Date_Rus = "Отображение пользователей с введенной даты";
         public const string Show_Users_From_Register_Date_Eng = "Showing users from the entered date";
 
-        public const string Registr_Date_Aze = "Qeydiyyat tarixi";
-        public const string Registr_Date_Rus = "Дата регистрации";
-        public const string Registr_Date_Eng = "Register date";
+        public const string Registr_Date_Aze = "Qeydiyyat tarixi:";
+        public const string Registr_Date_Rus = "Дата регистрации:";
+        public const string Registr_Date_Eng = "Register date:";
 
         public const string Email_Not_Aze = "E-poçt tapılmadı";
         public const string Email_Not_Rus = "Электронная почта не найдена";

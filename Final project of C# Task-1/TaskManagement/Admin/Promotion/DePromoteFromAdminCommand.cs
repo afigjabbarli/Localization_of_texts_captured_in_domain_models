@@ -22,7 +22,7 @@ namespace TaskManagement.Admin.DePromoteFromAdmin
 
             if (user == null)
             {
-                Console.WriteLine("User not found");
+                Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.User_Not));
                 return;
             }
 
@@ -34,19 +34,19 @@ namespace TaskManagement.Admin.DePromoteFromAdmin
 
             if (user == UserService.CurrentUser)
             {
-                Console.WriteLine("You can't yourself");
+                Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Cant_yourself));
                 return;
             }
 
             if (user.Role == UserRole.Member)
             {
-                Console.WriteLine("User is already standart");
+                Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Already_Standart));
                 return;
             }
 
             user.Role = UserRole.Member;
 
-            Console.WriteLine("Admin succussfully depromoted from admin to user!");
+            Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.From_Admin_To_User));
         }
     }
 }

@@ -9,9 +9,11 @@ using TaskManagement.Admin.ShowUser;
 using TaskManagement.Admin.UserManagement;
 using TaskManagement.Client.Commands;
 using TaskManagement.Common;
+using TaskManagement.Contants;
 using TaskManagement.Database;
 using TaskManagement.Database.Models;
 using TaskManagement.Infrastructure;
+using TaskManagement.Services;
 
 namespace TaskManagement.Admin
 {
@@ -19,24 +21,29 @@ namespace TaskManagement.Admin
     {
         public void Introduction()
         {
-            Console.WriteLine("Hello dear admin");
+            Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Hello_Admin));
             Console.WriteLine();
-            Console.WriteLine("Please choose one of the commands shown on the screen.");
+            Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.shownCommand));
             Console.WriteLine();
-            Console.WriteLine("Show-users");
-            Console.WriteLine("Show-user-by-email");
-            Console.WriteLine("Show-user-by-id");
-            Console.WriteLine("Add-user");
-            Console.WriteLine("Promote-to-admin");
-            Console.WriteLine("Depromote-from-admin");
-            Console.WriteLine("Update-settings");
-            Console.WriteLine("Remove-user");
-            Console.WriteLine("Block-user");
-            Console.WriteLine("Message-to");
-            Console.WriteLine("Logout");
+            Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Show_Users));
+            Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Show_Users_ByEmail));
+            Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Show_Users_ById));
+            Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Add_User));
+            Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Promote_Admin));
+            Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.DePromote_FromAdmin));
+            Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Update_Settings));
+            Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Remove_User));
+            Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Block_User));
+            Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Message_To));
+            Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Logout));
+
+            if (LocalizationService.CurrentCulture.Equals(SupportedCulture.Eng))
+            {
+
+
             while (true)
             {
-                Console.Write("Command:" + " ");
+                Console.Write("Command:");
                 string command = Console.ReadLine()!;
 
                 switch (command)
@@ -79,6 +86,137 @@ namespace TaskManagement.Admin
                         break;
                 }
             }
+
+            }
+
+            if (LocalizationService.CurrentCulture.Equals(SupportedCulture.Aze))
+            {
+                while (true)
+                {
+                    Console.Write("Emr:");
+                    string command = Console.ReadLine()!;
+
+                    switch (command)
+                    {
+                        case "Istifadechilerin gosterilmesi":
+                            CommandRouter.Route<ShowUsersCommand>();
+                            break;
+                        case "Istifadechilerin emaile uyghun gosterilmesi":
+                            CommandRouter.Route<ShowUserByEmailCommand>();
+                            break;
+                        case "Istifadechilerin identifikasiya koduna uyghun gosterilmesi":
+                            CommandRouter.Route<ShowUserByIdCommand>();
+                            break;
+                        case "Istifadechi elave etmek":
+                            CommandRouter.Route<AddUserCommand>();
+                            break;
+                        case "Istifadechinin admin olunmasi":
+                            CommandRouter.Route<PromoteToAdminCommand>();
+                            break;
+                        case "Istifadechinin adminlikden chixarilmasi":
+                            CommandRouter.Route<DePromoteFromAdminCommand>();
+                            break;
+                        case "Yeniləmə-parametrlər":
+                            CommandRouter.Route<UpdateSettingsCommand>();
+                            break;
+                        case "Istifadechinin silinmesi":
+                            CommandRouter.Route<RemoveUserCommand>();
+                            break;
+                        case "Istifadechinin bloklanmasi":
+                            CommandRouter.Route<BanUserCommand>();
+                            break;
+                        case "Mesaj gonderilmesi":
+                            CommandRouter.Route<SendMessageCommand>();
+                            break;
+                        case "Chıxısh":
+                            Console.WriteLine("Sagh ol");
+                            return;
+                        default:
+                            Console.WriteLine("Yanlış daxil edilmish melumat! Lütfen yeniden cehd edin");
+                            break;
+                    }
+                }
+            }
+
+            if (LocalizationService.CurrentCulture.Equals(SupportedCulture.Rus))
+            {
+
+                while (true)
+                {
+                    Console.Write("команда:");
+                    string command = Console.ReadLine()!;
+
+                    switch (command)
+                    {
+                        case "показ пользователей":
+                            CommandRouter.Route<ShowUsersCommand>();
+                            break;
+                        case "показ пользователей по электронной почте":
+                            CommandRouter.Route<ShowUserByEmailCommand>();
+                            break;
+                        case "Отображение в соответствии с идентификационным кодом пользователя":
+                            CommandRouter.Route<ShowUserByIdCommand>();
+                            break;
+                        case "Добавить пользователя":
+                            CommandRouter.Route<AddUserCommand>();
+                            break;
+                        case "Делаем пользователя админом":
+                            CommandRouter.Route<PromoteToAdminCommand>();
+                            break;
+                        case "Удаление пользователя из администрации":
+                            CommandRouter.Route<DePromoteFromAdminCommand>();
+                            break;
+                        case "Обновить настройки":
+                            CommandRouter.Route<UpdateSettingsCommand>();
+                            break;
+                        case "Удалить пользователя":
+                            CommandRouter.Route<RemoveUserCommand>();
+                            break;
+                        case "Блокировать пользователя":
+                            CommandRouter.Route<BanUserCommand>();
+                            break;
+                        case "Сообщение для":
+                            CommandRouter.Route<SendMessageCommand>();
+                            break;
+                        case "Выйти":
+                            Console.WriteLine("Пока-пока");
+                            return;
+                        default:
+                            Console.WriteLine("Неверный ввод, пожалуйста, попробуйте еще раз");
+                            break;
+                    }
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
     }
 }

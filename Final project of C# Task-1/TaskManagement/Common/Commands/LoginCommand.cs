@@ -17,8 +17,8 @@ namespace TaskManagement.Common.Commands
             
 
 
-            Console.Write("Please enter your email:"); string email = Console.ReadLine()!;
-            Console.Write("Please enter your password:"); string password = Console.ReadLine()!;
+            Console.Write(LocalizationService.GetTranslation(TranslationKey.Enter_Email)); string email = Console.ReadLine()!;
+            Console.Write(LocalizationService.GetTranslation(TranslationKey.Enter_Password)); string password = Console.ReadLine()!;
             UserRepository userRepository = new UserRepository();
             List<User> users = userRepository.GetAll().Cast<User>().ToList();
 

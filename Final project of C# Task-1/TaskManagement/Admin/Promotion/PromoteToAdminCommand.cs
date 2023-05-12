@@ -7,6 +7,7 @@ using TaskManagement.Common.Commands;
 using TaskManagement.Contants;
 using TaskManagement.Database.Models;
 using TaskManagement.Database.Repositories;
+using TaskManagement.Services;
 
 namespace TaskManagement.Admin.DePromoteFromAdmin
 {
@@ -16,24 +17,24 @@ namespace TaskManagement.Admin.DePromoteFromAdmin
         {
             UserRepository userRepository = new UserRepository();
 
-            string email = Console.ReadLine()!;
+            Console.Write(LocalizationService.GetTranslation(TranslationKey.Enter_Email)); string email = Console.ReadLine()!;
             User user = userRepository.GetUserOrDefaultByEmail(email);
 
             if (user == null)
             {
-                Console.WriteLine("User not found");
+                Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.User_Not));
                 return;
             }
 
             if (user.Role == UserRole.Admin)
             {
-                Console.WriteLine("User is already is admin");
+                Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Already_Admin));
                 return;
             }
 
             user.Role = UserRole.Admin;
 
-            Console.WriteLine("User succussfully promoted to admin!");
+            Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.From_User_To_Admin));
         }
     }
 }

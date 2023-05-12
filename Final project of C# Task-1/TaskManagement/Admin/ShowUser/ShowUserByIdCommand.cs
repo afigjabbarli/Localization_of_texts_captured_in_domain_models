@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TaskManagement.Common.Commands;
+using TaskManagement.Contants;
 using TaskManagement.Database;
 using TaskManagement.Database.Models;
 using TaskManagement.Database.Repositories;
+using TaskManagement.Services;
 
 namespace TaskManagement.Admin.ShowUser
 {
@@ -20,13 +22,13 @@ namespace TaskManagement.Admin.ShowUser
             {
                 try
                 {
-                    Console.Write("");
+                    Console.Write(LocalizationService.GetTranslation(TranslationKey.Input_User_Id));
                     int id = int.Parse(Console.ReadLine()!);
 
                     User user = userRepository.GetById(id)!;
                     if (user == null)
                     {
-                        Console.WriteLine("Email not found");
+                        Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.User_Not));
                         continue;
                     }
 
@@ -34,7 +36,7 @@ namespace TaskManagement.Admin.ShowUser
                 }
                 catch
                 {
-                    Console.WriteLine("Invalid input pls try again");
+                    Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Invalid_Input));
                 }
             }
 
