@@ -62,7 +62,14 @@ namespace TaskManagement.Contants
         Already_Standart = 52,
         From_Admin_To_User = 53,
         Cant_Remove_Admin = 54,
-        Cant_Ban_Admin = 55
+        Cant_Ban_Admin = 55,
+        Hello_User = 56,
+        Welcome_User_Menu = 57,
+        Update_Settings_Command = 58,
+        Close_Account_Command = 59,
+        Message_Management = 60,
+        Blog_Management = 61,
+        Command_Not_Found = 62
 
 
     }

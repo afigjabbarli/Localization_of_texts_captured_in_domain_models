@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TaskManagement.Client.Commands;
 using TaskManagement.Common;
+using TaskManagement.Contants;
 using TaskManagement.Database.Models;
 using TaskManagement.Infrastructure;
 using TaskManagement.Services;
@@ -15,19 +16,21 @@ namespace TaskManagement.Client
     {
         public void Introduction()
         {
-            Console.WriteLine($"Hello! dear user : <<{UserService.CurrentUser.LastName} {UserService.CurrentUser.Name}>> welcome to the user menu...");
+            Console.WriteLine($"{LocalizationService.GetTranslation(TranslationKey.Hello_User)}  <<{UserService.CurrentUser.LastName} {UserService.CurrentUser.Name}>> {LocalizationService.GetTranslation(TranslationKey.Welcome_User_Menu)}");
             Console.WriteLine();
-            Console.WriteLine("Update settings command");
-            Console.WriteLine("Close Account Command");
-            Console.WriteLine("Message Management Panel");
-            Console.WriteLine("Blog Management Panel");
-            Console.WriteLine("Exit");
+            Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Update_Settings_Command));
+            Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Close_Account_Command));
+            Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Message_Management));
+            Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Blog_Management));
+            Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Exit));
             Console.WriteLine();
-            while ( true )
+            if (LocalizationService.CurrentCulture.Equals(SupportedCulture.Eng))
             {
-                Console.Write("Command:"); string command = Console.ReadLine()!;
-                switch( command )
-                {
+               while ( true )
+               {
+                  Console.Write("Command:"); string command = Console.ReadLine()!;
+                  switch( command )
+                  {
                     case "Update settings command":
                     CommandRouter.Route<UpdateSettingsCommand>();
                     break;
@@ -44,7 +47,69 @@ namespace TaskManagement.Client
                     return;
                     default: Console.WriteLine("This command is not in the menu! Please re-enter...");
                     break;
-                    
+                  }
+               }
+
+            }
+
+            if (LocalizationService.CurrentCulture.Equals(SupportedCulture.Aze))
+            {
+                while (true)
+                {
+                    Console.Write("Emr:"); string command = Console.ReadLine()!;
+                    switch (command)
+                    {
+                        case "Parametrleri yenilemek":
+                            CommandRouter.Route<UpdateSettingsCommand>();
+                            break;
+                        case "Hesabi baghlamaq":
+                            CommandRouter.Route<CloseAccountCommand>();
+                            break;
+                        case "Mesajlarin idare olunmasi paneli":
+                            CommandRouter.Route<MessageManagementPanel>();
+                            break;
+                        case "Bloglarin idare olunmasi paneli":
+                            CommandRouter.Route<BlogManagementPanel>();
+                            break;
+                        case "Chıxish":
+                            return;
+                        default:
+                            Console.WriteLine("Bu emr menyuda yoxdur! Lutfen, yeniden daxil olun...");
+                            break;
+                    }
+                }
+            }
+
+            if (LocalizationService.CurrentCulture.Equals(SupportedCulture.Rus))
+            {
+                while (true)
+                {
+                    Console.Write("команда:"); string command = Console.ReadLine()!;
+                    switch (command)
+                    {
+                        case "Команда обновления настроек":
+                            CommandRouter.Route<UpdateSettingsCommand>();
+                            break;
+                        case "Команда закрытия учетной записи":
+                            CommandRouter.Route<CloseAccountCommand>();
+                            break;
+                        case "Панель управления сообщениями":
+                            CommandRouter.Route<MessageManagementPanel>();
+                            break;
+                        case "Панель управления блогом":
+                            CommandRouter.Route<BlogManagementPanel>();
+                            break;
+                        case "Выход":
+                            return;
+                        default:
+                            Console.WriteLine("Этой команды нет в меню! Пожалуйста, введите еще раз...");
+                            break;
+                    }
+                }
+
+
+            }
+                     
             
 
 
@@ -58,7 +123,6 @@ namespace TaskManagement.Client
 
 
 
-                }
 
 
 
@@ -71,7 +135,6 @@ namespace TaskManagement.Client
 
 
 
-            }
 
         }
     }

@@ -223,6 +223,34 @@ namespace TaskManagement.Contants
         public const string Cant_Ban_Admin_Rus = "Пользователь админ, его нельзя забанить";
         public const string Cant_Ban_Admin_Eng = "User is admin you can't ban him!";
 
+        public const string Hello_User_Aze = "Salam, hormetli istifadechi :";
+        public const string Hello_User_Rus = "Привет! дорогой пользователь :";
+        public const string Hello_User_Eng = "Hello! dear user :";
+
+        public const string Welcome_User_Menu_Aze = "Istifadechi menyusuna xosh gelmisiz...";
+        public const string Welcome_User_Menu_Rus = "Добро пожаловать в меню пользователя...";
+        public const string Welcome_User_Menu_Eng = "Welcome to the user menu...";
+
+        public const string Update_Settings_Command_Aze = "Parametrleri yenilemek";
+        public const string Update_Settings_Command_Rus = "Команда обновления настроек";
+        public const string Update_Settings_Command_Eng = "Update settings command";
+
+        public const string Close_Account_Command_Aze = "Hesabi baghlamaq";
+        public const string Close_Account_Command_Rus = "Команда закрытия учетной записи";
+        public const string Close_Account_Command_Eng = "Close Account Command";
+
+        public const string Message_Management_Aze = "Mesajlarin idare olunmasi paneli";
+        public const string Message_Management_Rus = "Панель управления сообщениями";
+        public const string Message_Management_Eng = "Message Management Panel";
+
+        public const string Blog_Management_Aze = "Bloglarin idare olunmasi paneli";
+        public const string Blog_Management_Rus = "Панель управления блогом";
+        public const string Blog_Management_Eng = "Message Management Panel";
+
+        public const string Command_Not_Found_Aze = "Bu emr menyuda yoxdur! Lutfen, yeniden daxil olun...";
+        public const string Command_Not_Found_Rus = "Этой команды нет в меню! Пожалуйста, введите еще раз...";
+        public const string Command_Not_Found_Eng = "This command is not in the menu! Please re-enter...";
+
 
 
     }
