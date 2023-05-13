@@ -26,24 +26,13 @@ namespace TaskManagement.Client.Commands
                 {
                      Console.WriteLine($"{LocalizationService.GetTranslation(TranslationKey.Mes_Rec_FullName)} <<{message.Receiver.LastName} {message.Receiver.Name}>>");
                      Console.WriteLine($"{LocalizationService.GetTranslation(TranslationKey.Mes_Rec_Email)} {message.Receiver.Email}");
-                     Console.WriteLine($"{LocalizationService.GetTranslation(TranslationKey.Mes_Cur_Row_Nmb)} {currentRowNumber}{LocalizationService.GetTranslation(TranslationKey.Mes_Subject)} {LocalizationService.DisplayingAllMessagesSubjectCurrentLanguage(TranslationKey.Subject, message.CreatedAt)}");
                      Console.WriteLine($"{LocalizationService.GetTranslation(TranslationKey.Mes_Crt_Dt)} {message.CreatedAt}");
-                     Console.WriteLine($"{LocalizationService.GetTranslation(TranslationKey.Message_Id)} {message.Id}");
+                     int id = message.Id;
+                     Console.WriteLine($"{LocalizationService.GetTranslation(TranslationKey.Mes_Cur_Row_Nmb)} {currentRowNumber}{LocalizationService.GetTranslation(TranslationKey.Mes_Subject)} {LocalizationService.DisplayingMessagesSubjectCurrentLanguage(TranslationKey.Subject, id)} {LocalizationService.GetTranslation(TranslationKey.Message_Input_Content)} {LocalizationService.DisplayingMessagesContentCurrentLanguage(TranslationKey.Content, id)}");
                      currentRowNumber++;
-                     if(DataContext.Messages.Count == currentRowNumber)
-                     {
-                        Console.WriteLine();
-                        Console.Write("Please enter the message`s ID:");
-                        int MessageId = int.Parse(Console.ReadLine()!);
-                        Console.WriteLine();
-                        Console.WriteLine($" Message`s subject:{LocalizationService.DisplayingMessagesSubjectCurrentLanguage(TranslationKey.Subject, MessageId)}");
-                        Console.WriteLine($" Message`s content:{LocalizationService.DisplayingMessagesContentCurrentLanguage(TranslationKey.Content, MessageId)}");
-                
-                
-                
-                     }
                 }
             }
+                     
             
         }
     }

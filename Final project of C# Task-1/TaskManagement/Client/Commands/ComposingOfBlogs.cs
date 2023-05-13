@@ -6,6 +6,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using TaskManagement.Common.Commands;
 using TaskManagement.Contants;
+using TaskManagement.Database.Models;
 using TaskManagement.Services;
 
 namespace TaskManagement.Client.Commands
@@ -110,7 +111,18 @@ namespace TaskManagement.Client.Commands
                 Console.WriteLine(message);
             }
         }
-               
+        public static string GeneratingBlogCode()
+        {
+            Random randomCode = new Random();
+            int endCode = randomCode.Next(10000, 100000);
+            string blogPrefiks = "BL";
+            string blogCode = $"{blogPrefiks}{endCode}";
+            return blogCode;
+        }
+
+            
+
+
     }
               
 

@@ -333,6 +333,9 @@ namespace TaskManagement.Contants
         public const string Message_Id_Rus = "Идентификатор сообщения";
         public const string Message_Id_Eng = "Message ID";
 
+        public const string Message_Input_Content_Aze = "Mesajin metni:";
+        public const string Message_Input_Content_Rus = "Содержание сообщения";
+        public const string Message_Input_Content_Eng = "Message`s content";
 
 
 

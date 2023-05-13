@@ -29,13 +29,13 @@ namespace TaskManagement.Services
             return (string)fieldInfo.GetValue(fieldName)!;
         }
 
-        public static string DisplayingBlogsTitleCurrentLanguage(TranslationKey key, int blogId)
+        public static string DisplayingBlogsTitleCurrentLanguage(TranslationKey key, string blogCode)
         {
 
             string fieldNameTitle = $"{key}_{CurrentCulture}";
             foreach (Blog blog in DataContext.Blogs)
             {
-                if (blog.Id == blogId)
+                if (blog.BlogCode == blogCode)
                 {
                     PropertyInfo info = blog.GetType().GetProperty(fieldNameTitle)!;
                     Type type = typeof(Blog);
@@ -48,12 +48,12 @@ namespace TaskManagement.Services
             return LocalizationService.GetTranslation(TranslationKey.blogTitle);
 
         }
-        public static string DisplayingBlogsContentCurrentLanguage(TranslationKey key, int blogId)
+        public static string DisplayingBlogsContentCurrentLanguage(TranslationKey key, string blogCode)
         {
             string fieldNameContent = $"{key}_{CurrentCulture}";
             foreach (Blog blog in DataContext.Blogs)
             {
-                if (blog.Id == blogId)
+                if (blog.BlogCode == blogCode)
                 {
                     PropertyInfo info = blog.GetType().GetProperty(fieldNameContent)!;
                     Type type = typeof(Blog);

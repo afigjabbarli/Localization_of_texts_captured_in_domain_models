@@ -90,8 +90,8 @@ namespace TaskManagement.Contants
         Subject = 80,
         messageSubject = 81,
         messageContent = 82,
-        Message_Id = 83
-
+        Message_Id = 83,
+        Message_Input_Content = 84
 
 
 

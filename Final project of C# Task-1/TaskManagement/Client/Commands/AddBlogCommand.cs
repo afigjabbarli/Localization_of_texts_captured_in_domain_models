@@ -25,9 +25,9 @@ namespace TaskManagement.Client.Commands
             string content_Rus = ComposingOfBlogs.AcceptAndConfirmBlogContentRus();
             string title_Eng = ComposingOfBlogs.AcceptAndConfirmBlogTitleEng();
             string content_Eng = ComposingOfBlogs.AcceptAndConfirmBlogContentEng();
+            string blogCode = ComposingOfBlogs.GeneratingBlogCode();
 
-
-            Blog blog = new Blog(title_Aze, title_Rus, title_Eng, content_Aze, content_Rus, content_Eng, UserService.CurrentUser, BlogStatus.Created );
+            Blog blog = new Blog(title_Aze, title_Rus, title_Eng, content_Aze, content_Rus, content_Eng, blogCode, UserService.CurrentUser, BlogStatus.Created );
             blogRepository.Insert(blog);
             
 

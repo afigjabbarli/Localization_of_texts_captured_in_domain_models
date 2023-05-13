@@ -19,32 +19,20 @@ namespace TaskManagement.Client.Commands
             Console.WriteLine();
             Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.List_Rec_Messages));
             Console.WriteLine();
-            int currentRowNumber = 0;
+            int currentRowNumber = 1;
             foreach(Message message in DataContext.Messages)
             {
                 if(UserService.CurrentUser.Email.Equals(message.Receiver.Email))
                 {
                     Console.WriteLine($" {LocalizationService.GetTranslation(TranslationKey.Mes_Sen_FullName)} <<{message.Sender.LastName} {message.Sender.Name}>>");
                     Console.WriteLine($" {LocalizationService.GetTranslation(TranslationKey.Mes_Sen_Email)} {message.Sender.Email}");
-                    Console.WriteLine($" {LocalizationService.GetTranslation(TranslationKey.Mes_Subject)} {message.Subject_Aze}");
                     Console.WriteLine($" {LocalizationService.GetTranslation(TranslationKey.Mes_Crt_Dt)} {message.CreatedAt}");
-                    Console.WriteLine($" {LocalizationService.GetTranslation(TranslationKey.Mes_Cur_Row_Nmb)} {currentRowNumber}");
-                    currentRowNumber++;
-                    if (DataContext.Messages.Count == currentRowNumber)
-                    {
-                        Console.WriteLine();
-                        Console.Write("Please enter the message`s ID:");
-                        int MessageId = int.Parse(Console.ReadLine()!);
-                        Console.WriteLine();
-                        Console.WriteLine($" Message`s subject:{LocalizationService.DisplayingMessagesSubjectCurrentLanguage(TranslationKey.Subject, MessageId)}");
-                        Console.WriteLine($" Message`s content:{LocalizationService.DisplayingMessagesContentCurrentLanguage(TranslationKey.Content, MessageId)}");
-
-
-
-                    }
+                    int id = message.Id;
+                    Console.WriteLine($" {LocalizationService.GetTranslation(TranslationKey.Mes_Cur_Row_Nmb)} {currentRowNumber} {LocalizationService.GetTranslation(TranslationKey.Mes_Subject)} {LocalizationService.DisplayingMessagesSubjectCurrentLanguage(TranslationKey.Subject, id)}{LocalizationService.GetTranslation(TranslationKey.Message_Input_Content)} {LocalizationService.DisplayingMessagesContentCurrentLanguage(TranslationKey.Content, id)}");
+                    currentRowNumber++; 
                 }
             }
-            
+                    
             
             //MessageRepository messageRepository = new MessageRepository();
             //List<Message> messages = messageRepository.GetAll(m => m.Receiver == UserService.CurrentUser);
@@ -58,8 +46,10 @@ namespace TaskManagement.Client.Commands
 
             //    currentRowNumber++;
             //}
-
-
         }
     }
 }
+                    
+            
+
+
