@@ -16,6 +16,8 @@ namespace TaskManagement.Common.Commands
             
             
 
+            while (true)
+            {
 
             Console.Write(LocalizationService.GetTranslation(TranslationKey.Enter_Email)); string email = Console.ReadLine()!;
             Console.Write(LocalizationService.GetTranslation(TranslationKey.Enter_Password)); string password = Console.ReadLine()!;
@@ -56,6 +58,11 @@ namespace TaskManagement.Common.Commands
                         clientDashboard.Introduction();
                     }
                 }
+                
+            }
+                 Console.WriteLine();   
+                 Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Incorrect_Information));
+                 Console.WriteLine();  
             }
             
         }

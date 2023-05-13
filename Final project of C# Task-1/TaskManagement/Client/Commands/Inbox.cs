@@ -32,8 +32,6 @@ namespace TaskManagement.Client.Commands
                     currentRowNumber++; 
                 }
             }
-                    
-            
             //MessageRepository messageRepository = new MessageRepository();
             //List<Message> messages = messageRepository.GetAll(m => m.Receiver == UserService.CurrentUser);
 
@@ -47,6 +45,27 @@ namespace TaskManagement.Client.Commands
             //    currentRowNumber++;
             //}
         }
+        public static void CommentNotificationMessage()
+        {
+            MessageRepository messageRepository = new MessageRepository();
+            User user = ComposingOfMessages.AcceptAndConfirmReceiverEmail();
+            string subject_Aze = ComposingOfMessages.AcceptAndConfirmMessageSubjectAze();
+            string content_Aze = ComposingOfMessages.AcceptAndConfirmMessageContentAze();
+            string subject_Rus = ComposingOfMessages.AcceptAndConfirmMessageSubjectRus();
+            string content_Rus = ComposingOfMessages.AcceptAndConfirmMessageContentRus();
+            string subject_Eng = ComposingOfMessages.AcceptAndConfirmMessageSubjectEng();
+            string content_Eng = ComposingOfMessages.AcceptAndConfirmMessageContentEng();
+
+            Message message = new Message(subject_Aze, subject_Rus, subject_Eng, content_Aze, content_Rus, content_Eng, UserService.CurrentUser, );
+            messageRepository.Insert(message);
+
+            
+        }
+
+
+
+
+
     }
 }
                     
