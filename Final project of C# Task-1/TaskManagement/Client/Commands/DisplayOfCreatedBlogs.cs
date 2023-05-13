@@ -25,7 +25,7 @@ namespace TaskManagement.Client.Commands
                 Console.WriteLine($"Blog`s author: {blog.Owner.LastName} {blog.Owner.Name}");
                 Console.WriteLine($"Contact the author: {blog.Owner.Email}");    
                 Console.WriteLine($"Blog`s creation date: {blog.CreatedAt}");
-                Console.WriteLine($"Blog`s current row number: {RowNumber}Blog`s title: {LocalizationService.DisplayingAllBlogsTitleCurrentLanguage(TranslationKey.Title, blog.CreatedAt)}");
+                Console.WriteLine($"Blog`s current row number: <<{RowNumber}>> Blog`s title: {LocalizationService.DisplayingAllBlogsTitleCurrentLanguage(TranslationKey.Title, blog.CreatedAt)}");
             }
                
             Console.WriteLine();

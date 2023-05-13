@@ -10,6 +10,8 @@ namespace TaskManagement.Database
         public static List<Message> Messages { get; set; } = new List<Message>();
         public static List<Blog> Blogs { get; set; } = new List<Blog>();
 
+        public static List<Comment> Comments { get; set; } = new List<Comment>();
+
         static DataContext()
         {
             AddUserSeeedings();

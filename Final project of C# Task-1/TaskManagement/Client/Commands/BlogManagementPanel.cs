@@ -17,6 +17,7 @@ namespace TaskManagement.Client.Commands
             Console.WriteLine();
             Console.WriteLine("Add Blog Command");
             Console.WriteLine("Display of Created Blogs");
+            Console.WriteLine("Add Comment");
             Console.WriteLine("Exit");
             Console.WriteLine();
             while (true)
@@ -30,6 +31,9 @@ namespace TaskManagement.Client.Commands
                         break;
                     case "Display of Created Blogs":
                         CommandRouter.Route<DisplayOfCreatedBlogs>();
+                        break;
+                    case "Add Comment":
+                        CommandRouter.Route<AddComment>();
                         break;
                     case "Exit":
                         return;
