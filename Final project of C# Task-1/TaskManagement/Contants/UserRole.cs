@@ -11,6 +11,7 @@ namespace TaskManagement.Contants
         Member =  1, 
         Admin = 2, 
         Moderator = 4, 
-        SMM = 8
+        SMM = 8,
+        MainSystem = 16,
     }
 }

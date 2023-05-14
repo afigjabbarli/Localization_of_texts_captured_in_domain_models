@@ -29,7 +29,7 @@ namespace TaskManagement.Database
             Users.Add(new User("Super", "Admin", "123321", "admin@gmail.com", new DateTime(2022, 01, 01),  UserRole.Admin));
             Users.Add(new User("Afig", "Jabbarli", "salam123", "afigtj@code.edu.az", new DateTime(2023, 5, 11, 12, 52, 5), UserRole.Member));
             Users.Add(new User("Ixtiyar", "Jabbarzada", "salam321", "ixtiyarjabbarzada@code.edu.az", new DateTime(2023, 5, 11, 12, 52, 5), UserRole.Member));
-            
+            Users.Add(new User("Code", "Academy", "StudentOffice", "students@code.edu.az", new DateTime(2023, 5, 11, 12, 52, 5), UserRole.MainSystem));
         }
        
 

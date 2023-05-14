@@ -10,5 +10,6 @@ namespace TaskManagement.Services
     public class UserService
     {
         public static User CurrentUser { get; set; }
+        
     }
 }
