@@ -104,7 +104,7 @@ namespace TaskManagement
                         case "Bloglari sherhlerle birge gosterin":
                             CommandRouter.Route<ShowBlogsWithComments>();
                             break;
-                        case "Chıxish":
+                        case "Chixish":
                             Console.WriteLine("Sagh ol");
                             return;
                         default:

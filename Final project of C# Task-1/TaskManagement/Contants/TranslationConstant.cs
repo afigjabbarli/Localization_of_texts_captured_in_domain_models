@@ -177,7 +177,7 @@ namespace TaskManagement.Contants
         public const string Message_To_Rus = "Сообщение для";
         public const string Message_To_Eng = "Message-to";
 
-        public const string Logout_Aze = "Chıxısh";
+        public const string Logout_Aze = "Chixish";
         public const string Logout_Rus = "Выйти";
         public const string Logout_Eng = "Logout";
 

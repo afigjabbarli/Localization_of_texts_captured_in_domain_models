@@ -37,6 +37,10 @@ namespace TaskManagement.Common.Commands
                     }
                 }
             }
+            Console.WriteLine("The blog box is currently empty...");
+                
+                
+                
 
         }
     }

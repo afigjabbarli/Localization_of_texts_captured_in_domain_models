@@ -51,11 +51,13 @@ namespace TaskManagement.Common.Commands
                     {
                         AdminDashboard adminDashboard = new AdminDashboard();
                         adminDashboard.Introduction();
+                        return;
                     }
                     else
                     {
                         ClientDashboard clientDashboard = new ClientDashboard();
                         clientDashboard.Introduction();
+                        return;
                     }
                 }
                 

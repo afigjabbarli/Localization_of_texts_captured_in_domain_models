@@ -17,7 +17,8 @@ namespace TaskManagement.Client.Commands
         {
             while (true)
             {
-
+               BlogRepository.ShowBlogsForAddingComment();
+               Console.WriteLine();
                CommentRepository commentRepository = new CommentRepository();
                Console.WriteLine("Adding comments to blogs");
                Blog blog = ComposingOfComments.AcceptAndConfirmBlogCode();
@@ -29,7 +30,7 @@ namespace TaskManagement.Client.Commands
                string commentAddedMessage = $"Dear <<{UserService.CurrentUser.LastName} {UserService.CurrentUser.Name}>>, your comment has been successfully added to the blog. Thanks...";
                Console.WriteLine(commentAddedMessage);
                Compose.CommentNotificationMessage(blog.BlogCode);
-               Console.WriteLine($"Dear <<{UserService.CurrentUser.LastName} {UserService.CurrentUser.Name}>>, do you want to add a new comment(answer the question YES or NO)?:");
+               Console.Write($"Dear <<{UserService.CurrentUser.LastName} {UserService.CurrentUser.Name}>>, do you want to add a new comment(answer the question YES or NO)?:");
                string answer = Console.ReadLine()!;
                if (answer == "YES") continue;
                else return;

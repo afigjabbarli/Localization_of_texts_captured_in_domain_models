@@ -15,14 +15,7 @@ namespace TaskManagement.Admin.BlogManagement
     {
         public void Handle()
         {
-            BlogRepository blogRepository = new BlogRepository();
-
-            List<Blog> createdBlogs = blogRepository.GetAll(b => b.Status == BlogStatus.Created);
-
-            foreach (Blog blog in createdBlogs)
-            {
-                Console.WriteLine($"{blog.Id} {LocalizationService.DisplayingBlogsTitleCurrentLanguage}{blog.Owner.GetFullName()} {blog.CreatedAt}");
-            }
+            BlogRepository.ShowCreatedBlogsCommand();
         }
     }
 }

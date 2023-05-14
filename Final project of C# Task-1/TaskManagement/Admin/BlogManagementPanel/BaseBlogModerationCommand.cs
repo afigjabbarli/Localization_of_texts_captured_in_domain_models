@@ -20,8 +20,11 @@ namespace TaskManagement.Admin.BlogManagement
 
         public Blog ValidateAndGetBlog()
         {
-            int id = int.Parse(Console.ReadLine()!);
-            Blog blog = (Blog)_blogRepository.GetById(id)!;
+            Console.WriteLine();
+            BlogRepository.ShowCreatedBlogsCommand();
+            Console.WriteLine();
+            Console.Write("Dear admin, pls enter blogcode:" + " "); string blogCode = (Console.ReadLine()!);
+            Blog blog = BlogRepository.GetByBlogCode(blogCode);
 
             if (blog is null)
             {

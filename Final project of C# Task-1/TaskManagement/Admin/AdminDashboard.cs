@@ -135,7 +135,7 @@ namespace TaskManagement.Admin
                         case "Bloq İdarəetmə Paneli":
                             CommandRouter.Route<BlogManagement.BlogManagement>();
                             break;
-                        case "Chıxısh":
+                        case "Chixish":
                             Console.WriteLine("Sagh ol");
                             return;
                         default:
