@@ -14,6 +14,7 @@ using TaskManagement.Database;
 using TaskManagement.Database.Models;
 using TaskManagement.Infrastructure;
 using TaskManagement.Services;
+using TaskManagement.Admin.BlogManagement;
 
 namespace TaskManagement.Admin
 {
@@ -48,35 +49,38 @@ namespace TaskManagement.Admin
 
                 switch (command)
                 {
-                    case "Show-users":
+                    case "Show users":
                         CommandRouter.Route<ShowUsersCommand>();
                         break;
-                    case "Show-user-by-email":
+                    case "Show user by email":
                         CommandRouter.Route<ShowUserByEmailCommand>();
                         break;
-                    case "Show-user-by-id":
+                    case "Show user by id":
                         CommandRouter.Route<ShowUserByIdCommand>();
                         break;
-                    case "Add-user":
+                    case "Add user":
                         CommandRouter.Route<AddUserCommand>();
                         break;
-                    case "Promote-to-admin":
+                    case "Promote to admin":
                         CommandRouter.Route<PromoteToAdminCommand>();
                         break;
-                    case "Depromote-from-admin":
+                    case "Depromote from admin":
                         CommandRouter.Route<DePromoteFromAdminCommand>();   
                         break;
-                    case "Update-settings":
+                    case "Update settings":
                         CommandRouter.Route<UpdateSettingsCommand>();
                         break;
-                    case "Remove-user":
+                    case "Remove user":
                         CommandRouter.Route<RemoveUserCommand>();
                         break;
-                    case "Block-user":
+                    case "Block user":
                         CommandRouter.Route<BanUserCommand>();
                         break;
-                    case "Message-to":
+                    case "Message to":
                         CommandRouter.Route<SendMessageCommand>();
+                        break;
+                    case "Blog Management Panel":
+                        CommandRouter.Route<BlogManagement.BlogManagement>();
                         break;
                     case "Logout":
                         Console.WriteLine("Bye-bye");
@@ -128,6 +132,9 @@ namespace TaskManagement.Admin
                         case "Mesaj gonderilmesi":
                             CommandRouter.Route<SendMessageCommand>();
                             break;
+                        case "Bloq İdarəetmə Paneli":
+                            CommandRouter.Route<BlogManagement.BlogManagement>();
+                            break;
                         case "Chıxısh":
                             Console.WriteLine("Sagh ol");
                             return;
@@ -177,6 +184,9 @@ namespace TaskManagement.Admin
                             break;
                         case "Сообщение для":
                             CommandRouter.Route<SendMessageCommand>();
+                            break;
+                        case "Панель управления блогом":
+                            CommandRouter.Route<BlogManagement.BlogManagement>();
                             break;
                         case "Выйти":
                             Console.WriteLine("Пока-пока");

@@ -28,7 +28,7 @@ namespace TaskManagement.Client.Commands
                commentRepository.Insert(comment);
                string commentAddedMessage = $"Dear <<{UserService.CurrentUser.LastName} {UserService.CurrentUser.Name}>>, your comment has been successfully added to the blog. Thanks...";
                Console.WriteLine(commentAddedMessage);
-               Inbox.CommentNotificationMessage(blog.BlogCode);
+               Compose.CommentNotificationMessage(blog.BlogCode);
                Console.WriteLine($"Dear <<{UserService.CurrentUser.LastName} {UserService.CurrentUser.Name}>>, do you want to add a new comment(answer the question YES or NO)?:");
                string answer = Console.ReadLine()!;
                if (answer == "YES") continue;

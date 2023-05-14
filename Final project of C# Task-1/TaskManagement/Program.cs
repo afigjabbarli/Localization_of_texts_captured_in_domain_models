@@ -40,6 +40,9 @@ namespace TaskManagement
                     case "Update language":
                         CommandRouter.Route<UpdateLanguageCommand>();
                         break;
+                    case "Show blogs with comments":
+                        CommandRouter.Route<ShowBlogsWithComments>();
+                        break;
                     case "Exit":
                         Console.WriteLine("Bye-bye");
                         return;
@@ -65,6 +68,9 @@ namespace TaskManagement
                             break;
                         case "языковые опции":
                             CommandRouter.Route<UpdateLanguageCommand>();
+                            break;
+                        case "Показать блоги с комментариями":
+                            CommandRouter.Route<ShowBlogsWithComments>();
                             break;
                         case "Выход":
                             Console.WriteLine("Пока-пока");
@@ -93,6 +99,9 @@ namespace TaskManagement
                             break;
                         case "Dil sechimleri":
                             CommandRouter.Route<UpdateLanguageCommand>();
+                            break;
+                        case "Bloglari sherhlerle birge gosterin":
+                            CommandRouter.Route<ShowBlogsWithComments>();
                             break;
                         case "Chıxish":
                             Console.WriteLine("Sagh ol");
