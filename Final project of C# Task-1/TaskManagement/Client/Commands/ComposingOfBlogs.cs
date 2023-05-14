@@ -6,6 +6,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using TaskManagement.Common.Commands;
 using TaskManagement.Contants;
+using TaskManagement.Database;
 using TaskManagement.Database.Models;
 using TaskManagement.Services;
 
@@ -115,12 +116,33 @@ namespace TaskManagement.Client.Commands
         {
             Random randomCode = new Random();
             int endCode = randomCode.Next(10000, 100000);
-            string blogPrefiks = "BL";
-            string blogCode = $"{blogPrefiks}{endCode}";
+            string blogPrefix = "BL";
+            string blogCode = $"{blogPrefix}{endCode}";
+
+            bool isCodeUnique = IsBlogCodeUnique(blogCode);
+
+            while (!isCodeUnique)
+            {
+                endCode = randomCode.Next(10000, 100000);
+                blogCode = $"{blogPrefix}{endCode}";
+                isCodeUnique = IsBlogCodeUnique(blogCode);
+            }
+
             return blogCode;
         }
-
             
+        private static bool IsBlogCodeUnique(string blogCode)
+        {
+            foreach (Blog blog in DataContext.Blogs)
+            {
+                if (blog.BlogCode.Equals(blogCode))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
 
 
     }

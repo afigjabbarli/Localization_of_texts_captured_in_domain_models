@@ -20,6 +20,7 @@ namespace TaskManagement
             Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.registerCommand));
             Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.loginCommand));
             Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.languageCommand));
+            Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.show_Blogs_With_Comments));
             Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Exit));
             Console.WriteLine();
 

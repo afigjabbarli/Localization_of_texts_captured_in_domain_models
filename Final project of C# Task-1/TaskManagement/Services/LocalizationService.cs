@@ -147,6 +147,35 @@ namespace TaskManagement.Services
             }
             return LocalizationService.GetTranslation(TranslationKey.messageSubject);
         }
+
+        public static string DisplayingCommentContentCurrentLanguage(TranslationKey key, string blogCode)
+        {
+            string fieldNameContent = $"{key}_{CurrentCulture}";
+            foreach (Comment comment in DataContext.Comments)
+            {
+                if (comment.Blog.BlogCode.Equals(blogCode))
+                {
+                    PropertyInfo info = comment.GetType().GetProperty(fieldNameContent)!;
+                    Type type = typeof(Comment);
+                    if (info.Name == fieldNameContent)
+                    {
+                        return (string)type.GetProperty(fieldNameContent)?.GetValue(comment)!;
+                    }
+                }
+            }
+            return null!;
+        }
+
+
+
+
+
+
+
+
+
+
+
         
 
 

@@ -22,6 +22,7 @@ namespace TaskManagement.Database.Models
         public string BlogCode { get; set; }    
         public User Owner { get; set; }
         
+        
         public BlogStatus Status { get; set; }
         public Blog(string title_Aze, string title_Rus, string title_Eng, string content_Aze, string content_Rus, string content_Eng, string blogCode, User owner, BlogStatus status)
         {
@@ -34,8 +35,10 @@ namespace TaskManagement.Database.Models
             Content_Eng = content_Eng;
             BlogCode = blogCode;
 
+
             Owner = owner;
             Status = status;
+            
         }
     }
 

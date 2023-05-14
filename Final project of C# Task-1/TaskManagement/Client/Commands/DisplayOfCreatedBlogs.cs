@@ -21,13 +21,15 @@ namespace TaskManagement.Client.Commands
             int RowNumber = 1;  
             foreach(Blog blog in DataContext.Blogs)
             {
-                Console.WriteLine($"Blog`s code: {blog.BlogCode}");
-                Console.WriteLine($"Blog`s author: {blog.Owner.LastName} {blog.Owner.Name}");
-                Console.WriteLine($"Contact the author: {blog.Owner.Email}");    
-                Console.WriteLine($"Blog`s creation date: {blog.CreatedAt}");
-                Console.WriteLine($"Blog`s current row number: <<{RowNumber}>> Blog`s title: {LocalizationService.DisplayingAllBlogsTitleCurrentLanguage(TranslationKey.Title, blog.CreatedAt)}");
+                if (blog.Status.Equals(BlogStatus.Created))
+                {
+                  Console.WriteLine($"Blog`s code: {blog.BlogCode}");
+                  Console.WriteLine($"Blog`s author: {blog.Owner.LastName} {blog.Owner.Name}");
+                  Console.WriteLine($"Contact the author: {blog.Owner.Email}");    
+                  Console.WriteLine($"Blog`s creation date: {blog.CreatedAt}");
+                  Console.WriteLine($"Blog`s current row number: <<{RowNumber}>> Blog`s title: {LocalizationService.DisplayingAllBlogsTitleCurrentLanguage(TranslationKey.Title, blog.CreatedAt)}");
+                }
             }
-               
             Console.WriteLine();
             Console.Write("Please enter the blog`s code:");
             string blogCode = Console.ReadLine()!;
@@ -35,8 +37,10 @@ namespace TaskManagement.Client.Commands
             Console.WriteLine($"Blog`s title: {LocalizationService.DisplayingBlogsTitleCurrentLanguage(TranslationKey.Title, blogCode)}");
             Console.WriteLine($"Blog`s content: {LocalizationService.DisplayingBlogsContentCurrentLanguage(TranslationKey.Content, blogCode)}");
         }
-               
     }
+
+               
+               
 
 }
                 

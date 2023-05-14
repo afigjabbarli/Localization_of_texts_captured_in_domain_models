@@ -71,7 +71,7 @@ namespace TaskManagement.Client
                         case "Bloglarin idare olunmasi paneli":
                             CommandRouter.Route<BlogManagementPanel>();
                             break;
-                        case "Chıxish":
+                        case "Chixish":
                             return;
                         default:
                             Console.WriteLine("Bu emr menyuda yoxdur! Lutfen, yeniden daxil olun...");

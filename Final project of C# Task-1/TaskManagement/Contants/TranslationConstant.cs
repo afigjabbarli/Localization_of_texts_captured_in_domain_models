@@ -88,7 +88,7 @@ namespace TaskManagement.Contants
         public const string languageCommand_Rus = "языковые опции";
         public const string languageCommand_Eng = "Update language";
 
-        public const string Exit_Aze = "Chıxish";
+        public const string Exit_Aze = "Chixish";
         public const string Exit_Rus = "Выход";
         public const string Exit_Eng = "Exit";
 
@@ -337,7 +337,9 @@ namespace TaskManagement.Contants
         public const string Message_Input_Content_Rus = "Содержание сообщения";
         public const string Message_Input_Content_Eng = "Message`s content";
 
-
+        public const string show_Blogs_With_Comments_Aze = "Bloglari sherhlerle birge gosterin";
+        public const string show_Blogs_With_Comments_Rus = "Показать блоги с комментариями";
+        public const string show_Blogs_With_Comments_Eng = "Show blogs with comments";
 
 
     }
