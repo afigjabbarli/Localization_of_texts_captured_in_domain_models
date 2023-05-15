@@ -381,6 +381,25 @@ namespace TaskManagement.Contants
         public const string Show_Crt_Blog_Com_Rus = "Команда Показать созданные блоги";
         public const string Show_Crt_Blog_Com_Eng = "Show Created Blogs Command";
 
+        public const string Rej_And_App_By_Admin_Aze = "Hormetli admin, zehmet olmasa bloq kodunu daxil edin:" + " ";
+        public const string Rej_And_App_By_Admin_Rus = "Уважаемый администратор, пожалуйста, введите код блога:" + " ";
+        public const string Rej_And_App_By_Admin_Eng = "Dear admin, pls enter blogcode:" + " ";
+
+        public const string Blg_Not_Found_Aze = "Bloq tapılmadı";
+        public const string Blg_Not_Found_Rus = "Блог не найден";
+        public const string Blg_Not_Found_Eng = "Blog not found";
+
+        public const string Add_Blg_Com_Aze = "Blog elave edin";
+        public const string Add_Blg_Com_Rus = "Добавить блог";
+        public const string Add_Blg_Com_Eng = "Add Blog Command";
+
+        public const string Dis_Crt_Blgs_Aze = "Yaradılmısh Bloqların Gosterilmesi";
+        public const string Dis_Crt_Blgs_Rus = "Отображение созданных блогов";
+        public const string Dis_Crt_Blgs_Eng = "Display of Created Blogs";
+
+        public const string Add_Comment_Aze = "Sherh elave et";
+        public const string Add_Comment_Rus = "Добавить комментарий";
+        public const string Add_Comment_Eng = "Add Comment";
 
     }
 

@@ -104,6 +104,12 @@ namespace TaskManagement.Contants
         Rej_Blog_Com = 94,
         App_Blog_Com = 95,
         Show_Crt_Blog_Com = 96,
+        Rej_And_App_By_Admin = 97,
+        Blg_Not_Found = 98,
+        Add_Blg_Com = 99,
+        Dis_Crt_Blgs = 100,
+        Add_Comment = 101,
+
 
 
 

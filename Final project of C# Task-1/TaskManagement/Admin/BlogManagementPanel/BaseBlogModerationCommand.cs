@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using TaskManagement.Common;
 using TaskManagement.Database.Models;
 using TaskManagement.Database.Repositories;
+using TaskManagement.Services;
 
 namespace TaskManagement.Admin.BlogManagement
 {
@@ -23,12 +24,12 @@ namespace TaskManagement.Admin.BlogManagement
             Console.WriteLine();
             BlogRepository.ShowCreatedBlogsCommand();
             Console.WriteLine();
-            Console.Write("Dear admin, pls enter blogcode:" + " "); string blogCode = (Console.ReadLine()!);
+            Console.Write(LocalizationService.GetTranslation(Contants.TranslationKey.Rej_And_App_By_Admin)); string blogCode = (Console.ReadLine()!);
             Blog blog = BlogRepository.GetByBlogCode(blogCode);
 
             if (blog is null)
             {
-                Console.WriteLine("Blog not found");
+                Console.WriteLine(LocalizationService.GetTranslation(Contants.TranslationKey.Blg_Not_Found));
                 return default!;
             }
 
