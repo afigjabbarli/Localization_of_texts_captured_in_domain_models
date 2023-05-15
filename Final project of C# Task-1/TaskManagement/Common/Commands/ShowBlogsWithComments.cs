@@ -24,7 +24,7 @@ namespace TaskManagement.Common.Commands
                     Console.WriteLine(LocalizationService.DisplayingBlogsContentCurrentLanguage(TranslationKey.Content, blog.BlogCode));
                     Console.WriteLine();
                     Console.WriteLine();
-                    Console.Write("Comments:");
+                    Console.Write(LocalizationService.GetTranslation(TranslationKey.Comments));
                     foreach (Comment comment in DataContext.Comments)
                     {
                         int CommentRowNumber = 1;
@@ -37,7 +37,7 @@ namespace TaskManagement.Common.Commands
                     }
                 }
             }
-            Console.WriteLine("The blog box is currently empty...");
+            Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Empty_Blog_Box));
                 
                 
                 

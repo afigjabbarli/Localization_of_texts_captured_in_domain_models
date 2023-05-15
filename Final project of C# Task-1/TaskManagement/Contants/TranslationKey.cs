@@ -93,7 +93,20 @@ namespace TaskManagement.Contants
         Message_Id = 83,
         Message_Input_Content = 84,
         Comment_Content = 85,
-        show_Blogs_With_Comments = 86
+        show_Blogs_With_Comments = 86,
+        ChooseLanguageCommand = 87,
+        EngLanguage = 88,
+        RusLanguage = 89,
+        AzeLanguage = 90,
+        Empty_Blog_Box = 91,
+        Comments = 92,
+        Blog_Management_Panel = 93,
+        Rej_Blog_Com = 94,
+        App_Blog_Com = 95,
+        Show_Crt_Blog_Com = 96,
+
+
+
 
 
     }

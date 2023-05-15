@@ -2,6 +2,7 @@
 using TaskManagement.Database;
 using TaskManagement.Database.Models;
 using TaskManagement.Database.Repositories;
+using TaskManagement.Services.JsonService;
 using TaskManagement.Utilities;
 
 
@@ -21,6 +22,8 @@ namespace TaskManagement.Common.Commands
 
             User human = new User(firstName, lastName, password, email);
             userRepository.Insert(human);
+           
+           
         }
     }
 }

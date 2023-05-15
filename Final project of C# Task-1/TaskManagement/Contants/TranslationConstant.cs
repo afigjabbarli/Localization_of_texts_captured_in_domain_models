@@ -92,9 +92,9 @@ namespace TaskManagement.Contants
         public const string Exit_Rus = "Выход";
         public const string Exit_Eng = "Exit";
 
-        public const string InputCommand_Aze = "Emr";
-        public const string InputCommand_Rus = "команда";
-        public const string InputCommand_Eng = "Command";
+        public const string InputCommand_Aze = "Emr:" + " ";
+        public const string InputCommand_Rus = "команда:" + " ";
+        public const string InputCommand_Eng = "Command:" + " ";
 
         public const string ByeBye_Aze = "Sagh ol";
         public const string ByeBye_Rus = "Пока-пока";
@@ -255,7 +255,11 @@ namespace TaskManagement.Contants
 
         public const string Blog_Management_Aze = "Bloglarin idare olunmasi paneli";
         public const string Blog_Management_Rus = "Панель управления блогом";
-        public const string Blog_Management_Eng = "Message Management Panel";
+        public const string Blog_Management_Eng = "Blog Management Panel";
+
+        public const string Blog_Management_Panel_Aze = "Bloq İdarəetmə Paneli";
+        public const string Blog_Management_Panel_Rus = "Панель управления блогом";
+        public const string Blog_Management_Panel_Eng = "Blog Management Panel";
 
         public const string Command_Not_Found_Aze = "Bu emr menyuda yoxdur! Lutfen, yeniden daxil olun...";
         public const string Command_Not_Found_Rus = "Этой команды нет в меню! Пожалуйста, введите еще раз...";
@@ -340,6 +344,42 @@ namespace TaskManagement.Contants
         public const string show_Blogs_With_Comments_Aze = "Bloglari sherhlerle birge gosterin";
         public const string show_Blogs_With_Comments_Rus = "Показать блоги с комментариями";
         public const string show_Blogs_With_Comments_Eng = "Show blogs with comments";
+
+        public const string ChooseLanguageCommand_Aze = "Zehmet olmasa uyghun dili sechin:";
+        public const string ChooseLanguageCommand_Rus = "Выберите подходящий язык:";
+        public const string ChooseLanguageCommand_Eng = "Please choose the appropriate language:";
+
+        public const string EngLanguage_Aze = "Ingilis dili";
+        public const string EngLanguage_Rus = "Английский язык";
+        public const string EngLanguage_Eng = "English Language";
+
+        public const string RusLanguage_Aze = "Rus dili";
+        public const string RusLanguage_Rus = "Русский язык";
+        public const string RusLanguage_Eng = "Russian Language";
+
+        public const string AzeLanguage_Aze = "Azerbaycan dili";
+        public const string AzeLanguage_Rus = "азербайджанский язык";
+        public const string AzeLanguage_Eng = "Azerbaijani Language";
+
+        public const string Empty_Blog_Box_Aze = "Bloq qutusu hazırda boshdur...";
+        public const string Empty_Blog_Box_Rus = "В настоящее время окно блога пусто...";
+        public const string Empty_Blog_Box_Eng = "The blog box is currently empty...";
+
+        public const string Comments_Aze = "Sherhler:";
+        public const string Comments_Rus = "Комментарии:";
+        public const string Comments_Eng = "Comments:";
+
+        public const string Rej_Blog_Com_Aze = "Bloqlarin Tesdiq Edilmemesi";
+        public const string Rej_Blog_Com_Rus = "Отказ от блогов";
+        public const string Rej_Blog_Com_Eng = "Reject Blog Command";
+
+        public const string App_Blog_Com_Aze = "Bloglarin Tesdiq Olunmasi";
+        public const string App_Blog_Com_Rus = "Одобрение блогов";
+        public const string App_Blog_Com_Eng = "Approve Blog Command";
+
+        public const string Show_Crt_Blog_Com_Aze = "Yaradılmış Bloqlarin Gosterilmesi Komandasi";
+        public const string Show_Crt_Blog_Com_Rus = "Команда Показать созданные блоги";
+        public const string Show_Crt_Blog_Com_Eng = "Show Created Blogs Command";
 
 
     }

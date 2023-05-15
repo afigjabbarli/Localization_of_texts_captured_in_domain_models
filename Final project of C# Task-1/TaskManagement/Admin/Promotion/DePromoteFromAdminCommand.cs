@@ -17,7 +17,7 @@ namespace TaskManagement.Admin.DePromoteFromAdmin
         {
             UserRepository userRepository = new UserRepository();
 
-            string email = Console.ReadLine()!;
+            Console.Write(LocalizationService.GetTranslation(TranslationKey.Enter_Email)); string email = Console.ReadLine()!;
             User user = userRepository.GetUserOrDefaultByEmail(email);
 
             if (user == null)

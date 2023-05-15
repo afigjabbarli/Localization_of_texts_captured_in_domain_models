@@ -7,6 +7,7 @@ using TaskManagement.Database.Models;
 using TaskManagement.Database.Repositories;
 using TaskManagement.Infrastructure;
 using TaskManagement.Services;
+using TaskManagement.Services.JsonService;
 
 namespace TaskManagement
 {
@@ -15,6 +16,7 @@ namespace TaskManagement
 
         static void Main(string[] args)
         {
+           
             Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.shownCommand));
             Console.WriteLine();
             Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.registerCommand));

@@ -36,6 +36,7 @@ namespace TaskManagement.Admin
             Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Remove_User));
             Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Block_User));
             Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Message_To));
+            Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Blog_Management_Panel)) ;
             Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.Logout));
 
             if (LocalizationService.CurrentCulture.Equals(SupportedCulture.Eng))
