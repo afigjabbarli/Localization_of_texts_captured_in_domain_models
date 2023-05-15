@@ -8,6 +8,7 @@ using TaskManagement.Database;
 using TaskManagement.Database.Models;
 using TaskManagement.Database.Repositories;
 using TaskManagement.Services;
+using TaskManagement.Services.JsonService;
 
 namespace TaskManagement.Client.Commands
 {
@@ -26,6 +27,7 @@ namespace TaskManagement.Client.Commands
 
             Message message = new Message(subject_Aze, subject_Rus, subject_Eng, content_Aze, content_Rus, content_Eng, UserService.CurrentUser, user);
             messageRepository.Insert(message);
+            DataOfSerializationAndDeserialization.MessagesDataFromRamToFolder();
         }
 
         public static void CommentNotificationMessage(string blogCode)
@@ -50,6 +52,7 @@ namespace TaskManagement.Client.Commands
 
                             Message message = new Message(subject_Aze, subject_Rus, subject_Eng, content_Aze, content_Rus, content_Eng, userSystem, blog.Owner);
                             messageRepository.Insert(message);
+                            DataOfSerializationAndDeserialization.MessagesDataFromRamToFolder();
 
                         }
                     }

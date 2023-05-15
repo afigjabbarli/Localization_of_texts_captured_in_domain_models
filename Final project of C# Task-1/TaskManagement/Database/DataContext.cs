@@ -1,4 +1,5 @@
-﻿using TaskManagement.Contants;
+﻿using System.Text.Json.Nodes;
+using TaskManagement.Contants;
 using TaskManagement.Database.Models;
 using TaskManagement.Database.Repositories;
 
@@ -11,6 +12,7 @@ namespace TaskManagement.Database
         public static List<Blog> Blogs { get; set; } = new List<Blog>();
        
         public static List<Comment> Comments { get; set; } = new List<Comment>();
+
 
         static DataContext()
         {
@@ -31,8 +33,8 @@ namespace TaskManagement.Database
             Users.Add(new User("Ixtiyar", "Jabbarzada", "salam321", "ixtiyarjabbarzada@code.edu.az", new DateTime(2023, 5, 11, 12, 52, 5), UserRole.Member));
             Users.Add(new User("Code", "Academy", "StudentOffice", "students@code.edu.az", new DateTime(2023, 5, 11, 12, 52, 5), UserRole.MainSystem));
         }
-       
 
-       
+        
+        
     }
 }

@@ -22,6 +22,8 @@ namespace TaskManagement.Common.Commands
 
             User human = new User(firstName, lastName, password, email);
             userRepository.Insert(human);
+            DataOfSerializationAndDeserialization.UsersDataFromRamToFolder();
+            
            
            
         }

@@ -9,6 +9,7 @@ using TaskManagement.Common.Commands;
 using TaskManagement.Database.Models;
 using TaskManagement.Database.Repositories;
 using TaskManagement.Services;
+using TaskManagement.Services.JsonService;
 
 namespace TaskManagement.Admin.MessageManagement
 {
@@ -26,6 +27,8 @@ namespace TaskManagement.Admin.MessageManagement
             string content_Eng = ComposingOfMessages.AcceptAndConfirmMessageContentEng();
 
             Message message = new Message(subject_Aze, subject_Rus, subject_Eng, content_Aze, content_Rus, content_Eng, UserService.CurrentUser, user);
+            messageRepository.Insert(message);
+            DataOfSerializationAndDeserialization.MessagesDataFromRamToFolder();
         }
     }
 }

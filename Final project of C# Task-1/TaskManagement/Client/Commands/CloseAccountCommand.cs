@@ -7,6 +7,7 @@ using TaskManagement.Common.Commands;
 using TaskManagement.Contants;
 using TaskManagement.Database.Repositories;
 using TaskManagement.Services;
+using TaskManagement.Services.JsonService;
 
 namespace TaskManagement.Client.Commands
 {
@@ -25,6 +26,7 @@ namespace TaskManagement.Client.Commands
             }
 
             userRepository.Remove(UserService.CurrentUser);
+            DataOfSerializationAndDeserialization.UsersDataFromRamToFolder();
         }
     }
 }

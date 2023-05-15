@@ -16,7 +16,10 @@ namespace TaskManagement
 
         static void Main(string[] args)
         {
-           
+            DataOfSerializationAndDeserialization.UsersDataFromFolderToRam();
+            DataOfSerializationAndDeserialization.BlogsDataFromFolderToRam();
+            DataOfSerializationAndDeserialization.CommentsDataFromFolderToRam();
+            DataOfSerializationAndDeserialization.MessagesDataFromFolderToRam();
             Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.shownCommand));
             Console.WriteLine();
             Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.registerCommand));

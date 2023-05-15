@@ -8,6 +8,7 @@ using TaskManagement.Common.Commands;
 using TaskManagement.Database.Models;
 using TaskManagement.Database.Repositories;
 using TaskManagement.Services;
+using TaskManagement.Services.JsonService;
 
 namespace TaskManagement.Client.Commands
 {
@@ -27,6 +28,7 @@ namespace TaskManagement.Client.Commands
                string comment_Content_Eng = ComposingOfComments.AcceptAndConfirmCommentContentEng();
                Comment comment = new Comment(comment_Content_Aze, comment_Content_Rus, comment_Content_Eng, UserService.CurrentUser, blog);
                commentRepository.Insert(comment);
+               DataOfSerializationAndDeserialization.CommentsDataFromRamToFolder();
                string commentAddedMessage = $"Dear <<{UserService.CurrentUser.LastName} {UserService.CurrentUser.Name}>>, your comment has been successfully added to the blog. Thanks...";
                Console.WriteLine(commentAddedMessage);
                Compose.CommentNotificationMessage(blog.BlogCode);

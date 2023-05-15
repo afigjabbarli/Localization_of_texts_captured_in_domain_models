@@ -14,58 +14,60 @@ namespace TaskManagement.Services.JsonService
     {
         public static void UsersDataFromRamToFolder()
         {
-            string adress = @"C:\DataOfTaskManagement\Users.txt";
+            string adress = @"C:\DatasOfFinalProject\User.txt";
             File.WriteAllText(adress, System.Text.Json.JsonSerializer.Serialize(DataContext.Users));
         }
-
         public static void UsersDataFromFolderToRam()
         {
-            string adress = @"C:\DataOfTaskManagement\Users.txt";
-            string readData = File.ReadAllText(adress);
-            var output = JsonConvert.DeserializeObject<List<User>>(readData);
-            DataContext.Users = output!;
-        }
+            string adress = @"C:\DatasOfFinalProject\User.txt";
+            string readText = File.ReadAllText(adress);
+            var outPut = JsonConvert.DeserializeObject<List<User>>(readText);
+            DataContext.Users = outPut!;
 
+        }
         public static void BlogsDataFromRamToFolder()
         {
-            string adress = @"C:\DataOfTaskManagement\Blogs.txt";
+            string adress = @"C:\DatasOfFinalProject\Blog.txt";
             File.WriteAllText(adress, System.Text.Json.JsonSerializer.Serialize(DataContext.Blogs));
         }
 
         public static void BlogsDataFromFolderToRam()
         {
-            string adress = @"C:\DataOfTaskManagement\Blogs.txt";
-            string readData = File.ReadAllText(adress);
-            var output = JsonConvert.DeserializeObject<List<Blog>>(readData);
-            DataContext.Blogs = output!;
-        }
-        public static void CommentsDataFromRamToFolder()
-        {
-            string adress = @"C:\DataOfTaskManagement\Comments.txt";
-            File.WriteAllText(adress, System.Text.Json.JsonSerializer.Serialize(DataContext.Comments));
+            string adress = @"C:\DatasOfFinalProject\Blog.txt";
+            string readText = File.ReadAllText(adress);
+            var outPut = JsonConvert.DeserializeObject<List<Blog>>(readText);
+            DataContext.Blogs = outPut!;
+
         }
 
-        public static void CommentsDataFromFolderToRam()
-        {
-            string adress = @"C:\DataOfTaskManagement\Comments.txt";
-            string readData = File.ReadAllText(adress);
-            var output = JsonConvert.DeserializeObject<List<Comment>>(readData);
-            DataContext.Comments = output!;
-        }
         public static void MessagesDataFromRamToFolder()
         {
-            string adress = @"C:\DataOfTaskManagement\Messages.txt";
+            string adress = @"C:\DatasOfFinalProject\Message.txt";
             File.WriteAllText(adress, System.Text.Json.JsonSerializer.Serialize(DataContext.Messages));
         }
 
         public static void MessagesDataFromFolderToRam()
         {
-            string adress = @"C:\DataOfTaskManagement\Messages.txt";
-            string readData = File.ReadAllText(adress);
-            var output = JsonConvert.DeserializeObject<List<Message>>(readData);
-            DataContext.Messages = output!;
+            string adress = @"C:\DatasOfFinalProject\Message.txt";
+            string readText = File.ReadAllText(adress);
+            var outPut = JsonConvert.DeserializeObject<List<Message>>(readText);
+            DataContext.Messages = outPut!;
+
         }
 
+        public static void CommentsDataFromRamToFolder()
+        {
+            string adress = @"C:\DatasOfFinalProject\Comment.txt";
+            File.WriteAllText(adress, System.Text.Json.JsonSerializer.Serialize(DataContext.Comments));
+        }
+        public static void CommentsDataFromFolderToRam()
+        {
+            string adress = @"C:\DatasOfFinalProject\Comment.txt";
+            string readText = File.ReadAllText(adress);
+            var outPut = JsonConvert.DeserializeObject<List<Comment>>(readText);
+            DataContext.Comments = outPut!;
+
+        }
 
     }
 }

@@ -30,6 +30,10 @@ namespace TaskManagement.Database.Models
             Role = role;
             CreatedAt = createdAt;
         }
+        public User()
+        {
+            
+        }
 
         public string GetShortInfo()
         {

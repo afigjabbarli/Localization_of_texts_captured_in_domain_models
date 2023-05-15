@@ -9,6 +9,7 @@ using TaskManagement.Contants;
 using TaskManagement.Database;
 using TaskManagement.Database.Models;
 using TaskManagement.Database.Repositories;
+using TaskManagement.Services.JsonService;
 
 namespace TaskManagement.Admin.UserManagement
 {
@@ -27,6 +28,7 @@ namespace TaskManagement.Admin.UserManagement
             User human = new User(firstName, lastName, password, email, UserRole.Member);
 
             userRepository.Insert(human);
+            DataOfSerializationAndDeserialization.UsersDataFromRamToFolder();
         }
     }
 }

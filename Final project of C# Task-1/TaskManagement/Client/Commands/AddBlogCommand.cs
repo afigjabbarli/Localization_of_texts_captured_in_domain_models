@@ -10,6 +10,7 @@ using TaskManagement.Contants;
 using TaskManagement.Database.Models;
 using TaskManagement.Database.Repositories;
 using TaskManagement.Services;
+using TaskManagement.Services.JsonService;
 
 namespace TaskManagement.Client.Commands
 {
@@ -29,6 +30,7 @@ namespace TaskManagement.Client.Commands
 
             Blog blog = new Blog(title_Aze, title_Rus, title_Eng, content_Aze, content_Rus, content_Eng, blogCode, UserService.CurrentUser, BlogStatus.Created );
             blogRepository.Insert(blog);
+            DataOfSerializationAndDeserialization.BlogsDataFromRamToFolder();
             
 
         }

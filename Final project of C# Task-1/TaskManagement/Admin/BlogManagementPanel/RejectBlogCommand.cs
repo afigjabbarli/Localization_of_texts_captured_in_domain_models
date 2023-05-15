@@ -8,6 +8,7 @@ using TaskManagement.Contants;
 using TaskManagement.Database.Models;
 using TaskManagement.Database.Repositories;
 using TaskManagement.Services;
+using TaskManagement.Services.JsonService;
 
 namespace TaskManagement.Admin.BlogManagement
 {
@@ -27,6 +28,7 @@ namespace TaskManagement.Admin.BlogManagement
             if (blog is null) return;
 
             blog.Status = BlogStatus.Rejected;
+            DataOfSerializationAndDeserialization.BlogsDataFromRamToFolder();
 
             _messageService.SendRejectedMessage(blog);
         }

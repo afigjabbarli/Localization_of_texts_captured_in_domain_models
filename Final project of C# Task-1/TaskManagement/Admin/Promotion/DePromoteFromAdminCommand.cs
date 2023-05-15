@@ -8,6 +8,7 @@ using TaskManagement.Contants;
 using TaskManagement.Database.Models;
 using TaskManagement.Database.Repositories;
 using TaskManagement.Services;
+using TaskManagement.Services.JsonService;
 
 namespace TaskManagement.Admin.DePromoteFromAdmin
 {
@@ -45,6 +46,7 @@ namespace TaskManagement.Admin.DePromoteFromAdmin
             }
 
             user.Role = UserRole.Member;
+            DataOfSerializationAndDeserialization.UsersDataFromRamToFolder();
 
             Console.WriteLine(LocalizationService.GetTranslation(TranslationKey.From_Admin_To_User));
         }

@@ -3,6 +3,7 @@ using TaskManagement.Contants;
 using TaskManagement.Database.Models;
 using TaskManagement.Database.Repositories;
 using TaskManagement.Services;
+using TaskManagement.Services.JsonService;
 
 namespace TaskManagement.Admin.UserManagement
 {
@@ -28,6 +29,7 @@ namespace TaskManagement.Admin.UserManagement
             }
 
             user.IsBanned = true;
+            DataOfSerializationAndDeserialization.UsersDataFromRamToFolder();
         }
     }
 }
